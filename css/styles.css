@@ -1,0 +1,327 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  width: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sulphur Point", sans-serif;
+  font-size: 1.02em;
+}
+main {
+  max-width: 1600px;
+  margin: auto;
+}
+a {
+  color: rgb(5, 41, 5);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.text-anchor {
+  font-size: inherit;
+  font-weight: 800;
+  color: green;
+  text-shadow: 2px 2px 4px rgb(141, 192, 141);
+}
+button {
+  transition: all 0.3s ease-in-out;
+}
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.3em;
+}
+footer i {
+  color: white;
+}
+footer {
+  width: 100%;
+}
+/*Universal class props*/
+.container {
+  padding: 20px;
+}
+.content-container {
+  gap: 24px;
+  width: 100%;
+}
+.content-container h1 {
+  text-align: center;
+}
+.content-heading {
+  margin: 20px 0;
+}
+.image-container {
+  display: flex;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+}
+.image-container.image-fill {
+  object-fit: cover;
+  display: block;
+  max-height: fit-content;
+}
+.image-container img {
+  max-width: 100%;
+  border-radius: inherit;
+}
+.image-container.tile img {
+  max-width: 80%;
+  border-radius: 50%;
+}
+.logo-container img {
+  max-width: 120px;
+  max-height: 120px;
+}
+.horizontal-desktop {
+  display: flex;
+  flex-direction: column;
+}
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 50%;
+}
+.full-height {
+  height: 100%;
+}
+.black-border {
+  border: 1px solid black;
+}
+.circle-border {
+  border-radius: 50% !important;
+}
+.round-border {
+  border-radius: 8px;
+}
+.rounder-border {
+  border-radius: 24px;
+}
+.box-shadow {
+  box-shadow: 6px 6px 8px rgba(24, 24, 24, 0.555);
+}
+.text-shadow {
+  text-shadow: 0px 0px 6px black;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.grid-item {
+  border: 1px solid black;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(1, 15, 3);
+}
+.showcase-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-radius: 16px;
+  gap: 8px;
+}
+.align-center {
+  align-items: center;
+}
+.align-center-text {
+  text-align: center;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.relative-position {
+  position: relative;
+}
+.absolute-position {
+  position: absolute;
+}
+.top-left {
+  top: 15%;
+  left: 15%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.fixed + div {
+  margin-top: 80px;
+}
+/*Specific class props*/
+.topbar {
+  background-color: rgb(214, 214, 214);
+  height: 80px;
+  align-items: center;
+}
+.styled-list {
+  list-style: none;
+}
+.styled-list li::before {
+  content: " - ";
+}
+.color-one {
+  background-color: rgb(48, 97, 48);
+  color: white;
+}
+.color-two {
+  background-color: rgb(11, 26, 16);
+  color: white;
+}
+.color-two a {
+  color: white;
+}
+.color-three {
+  background-color: rgb(29, 117, 26);
+  color: white;
+}
+.color-three a {
+  color: white;
+}
+#company-name h1 {
+  color: rgb(22, 75, 22);
+}
+.staggered-margins :first-child {
+  margin-left: 20px;
+}
+i.fa-solid.trigram {
+  color: black;
+  margin-right: 8px;
+  font-size: 1.3em;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.content-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: inherit;
+  color: white;
+}
+.bubble-btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: rgb(14, 87, 17);
+  color: white;
+  border: 1px solid #ffffff;
+  box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.384);
+  transition: all 0.3s ease-in-out;
+}
+/*drop menu and button styles*/
+button.drp-btn {
+  background: none;
+  border: none;
+}
+button.drp-btn i.btn-hide {
+  display: block;
+  animation: rotate-caret 0.5s ease-in-out;
+}
+button.drp-btn i.btn-show {
+  display: none;
+}
+.topbar .drop-menu {
+  position: absolute;
+}
+.drop-menu {
+  display: none;
+  flex-direction: column;
+}
+button.drp-btn:focus + .drop-menu {
+  display: flex;
+  animation: slide-down 0.5s ease-out;
+}
+button.drp-btn:focus :nth-child(2) {
+  display: block;
+  animation: rotate-caret 0.5s ease-in-out;
+}
+
+button.drp-btn:focus i.btn-hide {
+  display: none;
+}
+
+/*Form parts*/
+form {
+  gap: 8px;
+  height: fit-content;
+}
+input,
+textarea,
+select {
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+input[type="number"] {
+  max-width: 50px;
+}
+textarea {
+  resize: none;
+  overflow: default;
+  border: 2px solid black;
+  flex: 1;
+}
+.checkbox-container {
+  display: flex;
+  max-width: 600px;
+  gap: 16px;
+}
+.checkbox-container input[type="checkbox"] {
+  max-width: 20px;
+}
+.checkbox-container div {
+  width: fit-content;
+  min-width: 250px;
+}
+.name-container {
+  max-width: 600px;
+  width: 100%;
+}
+.name-container input {
+  flex: 1;
+}
+.form-btn {
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border-radius: 24px;
+  cursor: pointer;
+}

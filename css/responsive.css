@@ -1,0 +1,133 @@
+@media (min-width: 1024px) {
+  a:hover {
+    color: rgb(35, 66, 35);
+    text-shadow: 2px 2px 3px rgba(49, 48, 48, 0.322);
+    cursor: pointer;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  .bubble-btn:hover {
+    transform: scale(1.05);
+    background-color: #69db7c;
+    color: black;
+    border: 1px solid rgb(90, 110, 91);
+  }
+  .horizontal-desktop {
+    flex-direction: row;
+  }
+  .staggered-margins {
+    position: relative;
+    top: 50px;
+    right: 150px;
+  }
+  .half-width-desktop {
+    width: 50%;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  .topbar button.drp-btn i.trigram {
+    display: none;
+  }
+  .topbar div.drop-menu.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-right: 16px;
+  }
+  .sticky-on-desktop {
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+  }
+  .anchor-with-drop-btn {
+    position: relative;
+  }
+  .topbar .anchor-with-drop-btn .drop-menu a {
+    padding: 6px 30px;
+    border: 1px solid rgb(110, 110, 110);
+  }
+  .topbar .anchor-with-drop-btn .drop-menu a:hover {
+    color: white;
+    background-color: #69db7c;
+  }
+  .topbar .anchor-with-drop-btn .drop-menu {
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 8px;
+    background-color: rgb(211, 211, 211);
+  }
+  .anchor-with-drop-btn:hover .drop-menu,
+  button.drp-btn:hover + div.drop-menu {
+    display: flex;
+    animation: slide-down 1s ease-in-out;
+  }
+  .drop-menu:hover {
+    display: block;
+  }
+
+  footer .drop-menu {
+    position: relative;
+    left: 20px;
+  }
+
+  .anchor-with-drop-btn:hover button.drp-btn i.btn-show,
+  button.drp-btn:hover i.btn-show {
+    display: block;
+    animation: rotate-caret 0.5s ease-in-out;
+  }
+  .anchor-with-drop-btn:hover button.drp-btn i.btn-hide,
+  button.drp-btn:hover i.btn-hide {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .grid-item {
+    max-width: 30%;
+  }
+}
+@media (max-width: 1023px) {
+  .half-width-desktop {
+    width: 100%;
+  }
+  .container {
+    padding: 5px;
+  }
+  .sticky-mobile {
+    position: sticky;
+    top: 80px;
+    bottom: 200px;
+  }
+  .topbar .drop-menu.nested-parent {
+    top: 80px;
+    align-items: center;
+    width: 100vw;
+    min-height: fit-content;
+    border: 1px solid rgba(43, 43, 43, 0.349);
+    background-color: rgba(221, 221, 221, 0.849) !important;
+    padding: 10px 30px;
+    justify-content: space-around;
+  }
+  .topbar .drop-menu.nested {
+    position: relative;
+    text-align: center;
+  }
+  .topbar .drop-menu.nested-parent a,
+  .topbar .drop-menu.nested-parent div,
+  .topbar .drop-menu.nested-parent div a {
+    margin: 20px 0;
+  }
+  .drop-menu:hover,
+  .drop-menu:focus-within,
+  .drop-menu:focus {
+    display: flex;
+  }
+  footer .drop-menu {
+    align-items: center;
+  }
+  footer.container {
+    padding-bottom: 200px;
+  }
+}
+@media (max-width: 559px) {
+}
