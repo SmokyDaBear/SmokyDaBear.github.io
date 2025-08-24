@@ -2,4 +2,6 @@
 
 Landing Page
 
-This is my personal website for Verdant Webworks ![Verdant Logo](./assets/verdantwebworkslogo.png);
+This is the source for my Verdant Webworks Site. ![Verdant Logo](./assets/verdantwebworkslogo.png);
+
+The page can be seen live here: <https://smokydabear.github.io/>
