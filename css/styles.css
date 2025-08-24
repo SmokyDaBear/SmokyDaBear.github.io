@@ -248,6 +248,7 @@ footer p {
   font-size: 1.1rem;
 }
 .btns a {
+  color: var(--color-two);
   text-align: center;
   min-width: 115px;
   font-size: 1rem;
@@ -256,7 +257,7 @@ footer p {
   transition: all 0.4s ease;
 }
 .btns a:first-child {
-  border: 1px solid var(--color-opacity-dark);
+  border: 1px solid var(--color-two);
 }
 .btns a:first-child:hover {
   border-color: white;
