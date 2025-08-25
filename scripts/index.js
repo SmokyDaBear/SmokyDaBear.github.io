@@ -195,7 +195,7 @@ const projects = [
   {
     image: "../assets/saas.png",
     title: "Saas Site",
-    description: "Site built for a project assignment at Devslopes",
+    description: "Software as a service example commercial site",
     tags: ["Saas", "e-commerce"],
     sourceLink: "https://github.com/SmokyDaBear/css-final-project-saas-solved",
     pageLink: "https://smokydabear.github.io/css-final-project-saas-solved/",
@@ -203,8 +203,8 @@ const projects = [
   {
     image: "../assets/folio.png",
     title: "folio.",
-    description: "Site built as a project at Devslopes",
-    tags: ["javascript", "themes", "search functionality"],
+    description: "Portfolio showcase example website",
+    tags: ["javascript", "themes", "search functionality", "modals"],
     sourceLink: "https://github.com/SmokyDaBear/folio-project",
     pageLink: "https://smokydabear.github.io/folio-project/",
   },
