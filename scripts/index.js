@@ -224,22 +224,22 @@ const projects = [
     sourceLink: "",
     pageLink: "https://jessgreenportfolio.wordpress.com/",
   },
-  {
-    image: "../assets/fresh-bread.png",
-    title: "Remmy's Bakery",
-    description: "Bakery Site",
-    tags: ["food", "e-commerce"],
-    sourceLink: "",
-    pageLink: "",
-  },
-  {
-    image: "../assets/green-lyon-auto-logo.png",
-    title: "Green Lyon Auto",
-    description: "Automotive Repair site",
-    tags: ["automotive", "commercial", "industrial"],
-    sourceLink: "",
-    pageLink: "",
-  },
+  // {
+  //   image: "../assets/fresh-bread.png",
+  //   title: "Remmy's Bakery",
+  //   description: "Bakery Site",
+  //   tags: ["food", "e-commerce"],
+  //   sourceLink: "",
+  //   pageLink: "",
+  // },
+  // {
+  //   image: "../assets/green-lyon-auto-logo.png",
+  //   title: "Green Lyon Auto",
+  //   description: "Automotive Repair site",
+  //   tags: ["automotive", "commercial", "industrial"],
+  //   sourceLink: "",
+  //   pageLink: "",
+  // },
 ];
 
 const projectsSection = document.getElementById("projects-container");
