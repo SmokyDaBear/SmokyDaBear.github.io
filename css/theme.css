@@ -15,7 +15,7 @@
   --color-text: rgb(48, 48, 48);
 }
 [data-theme="dark"] {
-  --background: url(../assets/hero-dark.jpg);
+  --background: url(../assets/darker-plant.jpg);
   --background-main: url(../assets/dark-theme-bg.png);
   --bg: rgb(45, 59, 45);
   --bg-2: rgb(28, 28, 53);
@@ -63,7 +63,7 @@ section#hero {
   background: var(--background);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 80%;
+  background-position: left;
   width: 100%;
   height: fit-content;
   padding: 0;

@@ -69,12 +69,13 @@ ul.skills li:hover {
   padding: 32px;
   background-color: var(--color-opacity-dark);
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: rgb(244, 250, 234) !important;
   transform: translateY(150px);
   transition: all 0.8s ease;
 }
 .profile-image .profile-text p {
   font-size: 0.9rem;
+  color: inherit;
 }
 .logo-container {
   height: 60px;
