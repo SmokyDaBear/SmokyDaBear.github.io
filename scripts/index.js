@@ -193,7 +193,7 @@ const formatCard = (cardData, id) => {
 
 const projects = [
   {
-    image: "../assets/saas.png",
+    image: "../assets/saas.jpg",
     title: "Saas Site",
     description: "Software as a service example commercial site",
     tags: ["Saas", "e-commerce"],
@@ -201,7 +201,7 @@ const projects = [
     pageLink: "https://smokydabear.github.io/css-final-project-saas-solved/",
   },
   {
-    image: "../assets/folio.png",
+    image: "../assets/folio.jpg",
     title: "folio.",
     description: "Portfolio showcase example website",
     tags: ["javascript", "themes", "search functionality", "modals"],
@@ -209,7 +209,7 @@ const projects = [
     pageLink: "https://smokydabear.github.io/folio-project/",
   },
   {
-    image: "../assets/encrypter.png",
+    image: "../assets/encrypter.jpg",
     title: "Message Encryption Site",
     description: "Encrypts messages using various ciphers",
     tags: ["javascript", "cryptography"],
@@ -217,29 +217,29 @@ const projects = [
     pageLink: "https://smokydabear.github.io/message-encryption-site/",
   },
   {
-    image: "../assets/wp-portfolio.png",
+    image: "../assets/wp-portfolio.jpg",
     title: "Word Press Portfolio",
     description: "Personal portfolio site built with Word Press",
     tags: ["WordPress"],
     sourceLink: "",
     pageLink: "https://jessgreenportfolio.wordpress.com/",
   },
-  // {
-  //   image: "../assets/fresh-bread.png",
-  //   title: "Remmy's Bakery",
-  //   description: "Bakery Site",
-  //   tags: ["food", "e-commerce"],
-  //   sourceLink: "",
-  //   pageLink: "",
-  // },
-  // {
-  //   image: "../assets/green-lyon-auto-logo.png",
-  //   title: "Green Lyon Auto",
-  //   description: "Automotive Repair site",
-  //   tags: ["automotive", "commercial", "industrial"],
-  //   sourceLink: "",
-  //   pageLink: "",
-  // },
+  {
+    image: "../assets/fresh-bread.jpg",
+    title: "Remmy's Bakery",
+    description: "Bakery Site",
+    tags: ["food", "e-commerce"],
+    sourceLink: "",
+    pageLink: "",
+  },
+  {
+    image: "../assets/green-lyon-auto-logo.jpg",
+    title: "Green Lyon Auto",
+    description: "Automotive Repair site",
+    tags: ["automotive", "commercial", "industrial"],
+    sourceLink: "",
+    pageLink: "",
+  },
 ];
 
 const projectsSection = document.getElementById("projects-container");

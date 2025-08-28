@@ -1,6 +1,6 @@
 :root {
   --background: url(../assets/hero-flowers.jpg);
-  --background-main: url(../assets/tri-green-blur-bg.png);
+  --background-main: url(../assets/tri-green-blur-bg.jpg);
   --color-one: rgb(20, 92, 33);
   --color-two: rgb(19, 80, 40);
   --bg: rgb(250, 252, 242);
@@ -15,8 +15,8 @@
   --color-text: rgb(48, 48, 48);
 }
 [data-theme="dark"] {
-  --background: url(../assets/darker-plant.jpg);
-  --background-main: url(../assets/dark-theme-bg.png);
+  --background: url(../assets/hero-dark.jpg);
+  --background-main: url(../assets/dark-theme-bg.jpg);
   --bg: rgb(45, 59, 45);
   --bg-2: rgb(28, 28, 53);
   --bg-logo: rgba(221, 230, 204, 0.596);
