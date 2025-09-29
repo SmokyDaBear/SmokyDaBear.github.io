@@ -31,7 +31,11 @@ ul.skills li:hover {
   align-items: center;
   gap: 32px;
 }
+.horizontal-desktop p {
+  max-width: 600px;
+}
 .profile-image {
+  flex: 1;
   position: relative;
   padding: 6px;
   background-color: var(--color-two);
