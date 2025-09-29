@@ -72,32 +72,6 @@ if (heroTitle) {
   window.addEventListener("load", typeWriter);
 }
 
-// Optional: Fade in animation for project cards
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px",
-};
-
-const observer = new IntersectionObserver(function (entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-}, observerOptions);
-
-// Observe all project cards
-document.addEventListener("DOMContentLoaded", () => {
-  const projectCards = document.querySelectorAll(".project-card");
-  projectCards.forEach((card) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(20px)";
-    card.style.transition = "opacity 1s ease-in, transform 1s ease";
-    observer.observe(card);
-  });
-});
-
 //contact modal
 const modalOpeners = document.querySelectorAll("[data-open]");
 const closers = document.querySelectorAll("[data-close]");
@@ -176,7 +150,7 @@ const formatCard = (cardData, id) => {
   }
   return `          <div class="project-card">
             <div class="image-container" id="project-card-${id}">
-              <img src="${image}" alt="${title}" />
+              <img src="./assets/page-previews/${image}" alt="${title}" />
             </div>
             <div class="card-text">
               <div class="features">
@@ -193,7 +167,7 @@ const formatCard = (cardData, id) => {
 
 const projects = [
   {
-    image: "../assets/saas.jpg",
+    image: "saas.jpg",
     title: "Saas Site",
     description: "Software as a service example commercial site",
     tags: ["Saas", "e-commerce"],
@@ -201,7 +175,15 @@ const projects = [
     pageLink: "https://smokydabear.github.io/css-final-project-saas-solved/",
   },
   {
-    image: "../assets/folio.jpg",
+    image: "cocktails.jpg",
+    title: "Cocktails as a Service",
+    description: "Find cocktail recipes by name or ingredient",
+    tags: ["javascript", "API", "search functionality"],
+    sourceLink: "https://github.com/SmokyDaBear/cocktails-as-a-service",
+    pageLink: "https://smokydabear.github.io/cocktails-as-a-service/",
+  },
+  {
+    image: "folio.jpg",
     title: "folio.",
     description: "Portfolio showcase example website",
     tags: ["javascript", "themes", "search functionality", "modals"],
@@ -209,7 +191,7 @@ const projects = [
     pageLink: "https://smokydabear.github.io/folio-project/",
   },
   {
-    image: "../assets/encrypter.jpg",
+    image: "encrypter.jpg",
     title: "Message Encryption Site",
     description: "Encrypts messages using various ciphers",
     tags: ["javascript", "cryptography"],
@@ -217,28 +199,12 @@ const projects = [
     pageLink: "https://smokydabear.github.io/message-encryption-site/",
   },
   {
-    image: "../assets/wp-portfolio.jpg",
+    image: "wp-portfolio.jpg",
     title: "Word Press Portfolio",
     description: "Personal portfolio site built with Word Press",
     tags: ["WordPress"],
     sourceLink: "",
     pageLink: "https://jessgreenportfolio.wordpress.com/",
-  },
-  {
-    image: "../assets/fresh-bread.jpg",
-    title: "Remmy's Bakery",
-    description: "Bakery Site",
-    tags: ["food", "e-commerce"],
-    sourceLink: "",
-    pageLink: "",
-  },
-  {
-    image: "../assets/green-lyon-auto-logo.jpg",
-    title: "Green Lyon Auto",
-    description: "Automotive Repair site",
-    tags: ["automotive", "commercial", "industrial"],
-    sourceLink: "",
-    pageLink: "",
   },
 ];
 
@@ -248,3 +214,21 @@ for (let item of projects) {
   projectsSection.innerHTML += formatCard(item, projectCardCount);
   projectCardCount++;
 }
+
+//TODO:
+// {
+//   image: "fresh-bread.jpg",
+//   title: "Remmy's Bakery",
+//   description: "Bakery Site",
+//   tags: ["food", "e-commerce"],
+//   sourceLink: "",
+//   pageLink: "",
+// },
+// {
+//   image: "green-lyon-auto-logo.jpg",
+//   title: "Green Lyon Auto",
+//   description: "Automotive Repair site",
+//   tags: ["automotive", "commercial", "industrial"],
+//   sourceLink: "",
+//   pageLink: "",
+// },

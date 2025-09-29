@@ -1,8 +1,14 @@
 @media (min-width: 1023px) {
-  section#hero .hero-content {
-    max-width: 1023px;
-    left: 120px;
-    border-bottom-left-radius: 30px;
+  .project-card.next {
+    transform: translate(420px, 80px) scale(0.4);
+  }
+  .project-card.previous {
+    transform: translate(-420px, 80px) scale(0.4);
+  }
+  .project-card.current {
+    transform: scale(1) translate(0px, 0px);
+    z-index: 10;
+    opacity: 1;
   }
 }
 @media (max-width: 1023px) {
