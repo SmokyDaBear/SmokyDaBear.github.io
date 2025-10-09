@@ -183,6 +183,14 @@ const projects = [
     pageLink: "https://smokydabear.github.io/cocktails-as-a-service/",
   },
   {
+    image: "auto-site.jpg",
+    title: "Green Lyon Automotive",
+    description: "Automotive repair shop",
+    tags: ["landing page", "design", "automotive"],
+    pageLink: "https://smokydabear.github.io/auto-site/",
+    sourceLink: "https://github.com/SmokyDaBear/auto-site",
+  },
+  {
     image: "folio.jpg",
     title: "folio.",
     description: "Portfolio showcase example website",
