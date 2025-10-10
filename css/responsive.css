@@ -20,7 +20,7 @@
     border-top: 1px solid var(--color-two);
     box-shadow: 0 3px 5px var(--color-opacity);
     opacity: 0.85;
-    z-index: 10;
+    z-index: 20;
   }
   #hamburger {
     display: block;
@@ -69,6 +69,9 @@
   .projects-grid {
     flex-direction: column;
   }
+  .logo-container {
+    gap: 40%;
+  }
   .projects-grid .project-card {
     flex-direction: row;
   }
@@ -83,6 +86,9 @@
 @media (max-width: 600px) {
   .logo-container h4 {
     max-width: 140px;
+  }
+  .logo-container {
+    gap: 20%;
   }
   section#hero .hero-content h1 {
     font-size: 4rem;
