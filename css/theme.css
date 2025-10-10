@@ -15,6 +15,12 @@
   --color-gray-light: rgb(212, 212, 212);
   --color-gray-dark: rgb(24, 24, 24);
   --color-text: rgb(48, 48, 48);
+  --transparent-gradient: linear-gradient(
+    to right,
+    var(--color-opacity-two) 0%,
+    var(--color-opacity-three) 55%,
+    transparent 90%
+  );
 }
 [data-theme="dark"] {
   --background: url(../assets/hero-dark.jpg);
@@ -32,7 +38,7 @@
   --color-two: rgb(111, 167, 104);
   --color-opacity: rgba(102, 102, 102, 0.397);
   --color-opacity-two: rgba(48, 52, 59, 0.644);
-  --color-opacity-three: rgba(62, 105, 56, 0.658);
+  --color-opacity-three: rgba(19, 34, 17, 0.658);
   --color-opacity-dark: rgba(43, 42, 42, 0.651);
   --color-gray-light: rgb(66, 66, 66);
   --color-gray-dark: rgb(216, 216, 216);
@@ -79,15 +85,12 @@ section#hero {
   box-shadow: 0 5px 8px var(--color-opacity);
 }
 section#hero .hero-content {
-  padding: 16px;
+  width: fit-content;
+  padding: 5rem 1rem;
   position: sticky;
   top: 60px;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-opacity-two) 0%,
-    var(--color-opacity-three) 100%
-  );
-  border-radius: 0 0 190px 5px;
+  background: var(--transparent-gradient);
+  border-bottom-right-radius: 80px;
   text-align: left;
   align-content: space-around;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
