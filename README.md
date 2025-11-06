@@ -20,3 +20,16 @@
   The page can be seen live here: <https://smokydabear.github.io/>
   
 </div>
+
+## Projects
+
+### Android Notes & Checklists App
+
+A native Android application built with Kotlin for managing notes and checklists. Features include:
+- Create, edit, and delete notes
+- Create checklists with checkable items
+- Room database for persistent local storage
+- Material Design 3 UI
+- MVVM architecture
+
+📱 [View Android App](./android-app/) | [User Guide](./android-app/USER_GUIDE.md)
