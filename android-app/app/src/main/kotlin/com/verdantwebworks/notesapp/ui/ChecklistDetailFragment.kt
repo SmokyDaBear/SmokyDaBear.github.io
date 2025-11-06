@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.verdantwebworks.notesapp.data.Checklist
@@ -76,7 +77,7 @@ class ChecklistDetailFragment : Fragment() {
                 }
             }
 
-            checklistViewModel.getItemsForChecklist(id).observe(viewLifecycleOwner) { items ->
+            checklistViewModel.getItemsForChecklist(id).asLiveData().observe(viewLifecycleOwner) { items ->
                 adapter.submitList(items)
             }
         }
@@ -138,7 +139,9 @@ class ChecklistDetailFragment : Fragment() {
                     checklistId = newId,
                     text = itemText
                 )
-                checklistViewModel.insertItem(item)
+                lifecycleScope.launch {
+                    checklistViewModel.insertItem(item)
+                }
                 binding.editNewItem.text?.clear()
             }
         } else {
@@ -146,7 +149,9 @@ class ChecklistDetailFragment : Fragment() {
                 checklistId = currentId,
                 text = itemText
             )
-            checklistViewModel.insertItem(item)
+            lifecycleScope.launch {
+                checklistViewModel.insertItem(item)
+            }
             binding.editNewItem.text?.clear()
         }
     }
