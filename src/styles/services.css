@@ -1,0 +1,35 @@
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.serviceCard {
+  width: 250px;
+  max-width: 98%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-secondary);
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+}
+.serviceIcon {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  background: var(--text-primary);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.serviceName {
+  font-size: 1.5em;
+  margin: 12px 0;
+}
+.serviceDescription {
+  font-size: 1em;
+  color: #666;
+}

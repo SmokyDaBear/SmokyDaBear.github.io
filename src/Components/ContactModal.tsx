@@ -1,0 +1,118 @@
+import { useForm, ValidationError } from "@formspree/react";
+import { LogoImg } from "./LogoImg";
+
+type TContactModalProps = {
+  closeModal: () => void;
+};
+
+export function ContactModal({ closeModal }: TContactModalProps) {
+  const [state, handleSubmit] = useForm("mblqpgql");
+
+  if (state.succeeded) {
+    return (
+      <>
+        <div
+          className="modal"
+          onClick={(e) => {
+            const target = e.target as HTMLElement;
+            if (target.className.includes("modal")) closeModal();
+          }}
+        >
+          <div className="form-container modal-content">
+            <LogoImg />
+            <h2>Thank You!</h2>
+            <p>
+              Your message has been sent successfully. I will get back to you
+              soon.
+            </p>
+            <button className="call-to-action margin-auto" onClick={closeModal}>
+              Close
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <div
+        className="modal"
+        onClick={(e) => {
+          const target = e.target as HTMLElement;
+          if (target.className.includes("modal")) closeModal();
+        }}
+      >
+        <div
+          className="form-container modal-content"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <span className="close-btn"> X </span>
+          <LogoImg />
+          <h2>Contact Me</h2>
+          <p>
+            Fill out this form to get in touch with me. I'm always open to new
+            projects so don't hesitate to reach out.
+          </p>
+          <i className="fa-solid fa-close close-btn" onClick={closeModal}></i>
+          <form onSubmit={handleSubmit}>
+            <div className="input-wrap">
+              <label htmlFor="first-name">First Name</label>
+              <input id="first-name" type="text" name="first-name" required />
+              <ValidationError
+                prefix="First Name"
+                field="first-name"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className="input-wrap">
+              <label htmlFor="last-name">Last Name</label>
+              <input id="last-name" type="text" name="last-name" />
+              <ValidationError
+                prefix="Last Name"
+                field="last-name"
+                errors={state.errors}
+              />
+            </div>
+            <div className="input-wrap">
+              <label htmlFor="email">Email</label>
+              <input id="email" type="email" name="email" required />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className="input-wrap">
+              <label htmlFor="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" />
+              <ValidationError
+                prefix="Phone"
+                field="phone"
+                errors={state.errors}
+              />
+            </div>
+            <div className="input-wrap full-width">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+            </div>
+            <button
+              type="submit"
+              className="call-to-action"
+              disabled={state.submitting}
+            >
+              {state.submitting ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+}
