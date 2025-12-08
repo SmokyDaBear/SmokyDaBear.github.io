@@ -57,6 +57,9 @@
 
 .project-description {
   font-size: 1rem;
+}
+
+.list .project-description {
   color: var(--text-secondary);
 }
 
@@ -105,6 +108,7 @@
 }
 
 .grid .project-content {
+  color: var(--opacity-text);
   z-index: 2;
   padding: 0;
   padding-bottom: 18px;
@@ -133,6 +137,7 @@
 }
 
 .list .project-content {
+  color: var(--text);
   flex: 1;
   display: flex;
   flex-direction: column;
