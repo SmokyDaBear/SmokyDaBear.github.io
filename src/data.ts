@@ -160,7 +160,7 @@ export const faqs: TFaq[] = [
   {
     question: "How long does it take to build a website?",
     answer:
-      "The timeline for building a website varies depending on the complexity and scope of the project. A simple website can take a few weeks, while more complex projects may take several months. I work closely with clients to establish realistic timelines based on their specific requirements.",
+      "The timeline for building a website varies depending on the complexity and scope of the project. A simple website can take a few days or weeks, while more complex projects may take months. I work closely with clients to establish realistic timelines based on their specific requirements.",
   },
   {
     question: "What is your pricing structure?",

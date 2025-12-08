@@ -13,7 +13,7 @@ export function Home() {
       <section id="hero">
         <Suspense
           fallback={
-            <img src="/hero-image.jpg" alt="Hero" className="hero-image" />
+            <img src="/forest-hero.png" alt="Hero" className="hero-image" />
           }
         >
           <video
@@ -22,7 +22,7 @@ export function Home() {
             loop
             muted
             playsInline
-            poster="/hero-image.jpg"
+            poster="/forest-hero.png"
           >
             <source src="/forest.mp4" type="video/mp4" />
             Your browser does not support the video tag.

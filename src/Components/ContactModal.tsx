@@ -1,5 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { LogoImg } from "./LogoImg";
+import { closeIcon } from "../icons/icons";
 
 type TContactModalProps = {
   closeModal: () => void;
@@ -26,7 +27,7 @@ export function ContactModal({ closeModal }: TContactModalProps) {
               soon.
             </p>
             <button className="call-to-action margin-auto" onClick={closeModal}>
-              Close
+              {closeIcon()}
             </button>
           </div>
         </div>
@@ -47,7 +48,10 @@ export function ContactModal({ closeModal }: TContactModalProps) {
           className="form-container modal-content"
           onClick={(e) => e.stopPropagation()}
         >
-          <span className="close-btn"> X </span>
+          <span className="close-btn" onClick={closeModal}>
+            {" "}
+            {closeIcon("large")}{" "}
+          </span>
           <LogoImg />
           <h2>Contact Me</h2>
           <p>

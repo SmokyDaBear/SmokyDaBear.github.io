@@ -107,11 +107,10 @@ const warning = (size?: "large" | "small", error?: boolean) => (
 const linkIcon = (size?: "large" | "small") => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="var(--icon-fill)"
     viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="var(--icon-stroke)"
-    className={"icon hoverable link-icon " + (size ? size : "")}
+    strokeWidth={1.8}
+    stroke="currentColor"
+    className={"icon link-icon " + (size ? size : "")}
   >
     <path
       strokeLinecap="round"
@@ -126,7 +125,7 @@ const arrowUpRight = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <line x1="14" y1="10" x2="20" y2="4" strokeLinecap="round" />
     <line x1="20" y1="4" x2="16" y2="4" strokeLinecap="round" />
@@ -170,6 +169,23 @@ const clock = (size?: "large" | "small") => (
       strokeLinecap="round"
       strokeLinejoin="round"
       d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+);
+
+const closeIcon = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.8}
+    stroke="currentColor"
+    className={"icon " + (size ? size : "")}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 18L18 6M6 6l12 12"
     />
   </svg>
 );
@@ -320,7 +336,7 @@ const gridIcon = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <rect x="3" y="3" width="7" height="7" strokeLinecap="round" />
     <rect x="14" y="3" width="7" height="7" strokeLinecap="round" />
@@ -336,7 +352,7 @@ const listIcon = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <line x1="4" y1="6" x2="20" y2="6" strokeLinecap="round" />
     <line x1="4" y1="12" x2="20" y2="12" strokeLinecap="round" />
@@ -351,7 +367,7 @@ const searchIcon = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <circle cx="11" cy="11" r="8" strokeLinecap="round" />
     <line x1="21" y1="21" x2="16.65" y2="16.65" strokeLinecap="round" />
@@ -365,7 +381,7 @@ const chevronUp = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <path
       strokeLinecap="round"
@@ -381,7 +397,7 @@ const chevronRight = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <path
       strokeLinecap="round"
@@ -397,7 +413,7 @@ const chevronLeft = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <path
       strokeLinecap="round"
@@ -413,7 +429,7 @@ const chevronDown = (size?: "large" | "small") => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={"icon hoverable" + (size ? size : "")}
+    className={"icon hoverable " + (size ? size : "")}
   >
     <path
       strokeLinecap="round"
@@ -447,4 +463,5 @@ export {
   chevronRight,
   chevronLeft,
   chevronDown,
+  closeIcon,
 };

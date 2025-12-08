@@ -10,9 +10,17 @@ import Faq from "./pages/Faq";
 import { SearchResults } from "./pages/SearchResults";
 import { ScrollHandler } from "./utils/scrollHandler";
 import { useTheme } from "./utils/themeHandler";
+import { HiddenIconPage } from "./icons/HiddenIconPage";
 
 function App() {
-  type Page = "home" | "about" | "services" | "get-started" | "faq" | "search";
+  type Page =
+    | "home"
+    | "about"
+    | "services"
+    | "get-started"
+    | "faq"
+    | "search"
+    | "hidden-icons-page";
   useTheme().getTheme();
 
   const currentScrollY = ScrollHandler();
@@ -21,9 +29,15 @@ function App() {
     const hash = window.location.hash.replace("#", "").split("?")[0];
     if (
       hash &&
-      ["home", "about", "services", "get-started", "faq", "search"].includes(
-        hash
-      )
+      [
+        "home",
+        "about",
+        "services",
+        "get-started",
+        "faq",
+        "search",
+        "hidden-icons-page",
+      ].includes(hash)
     ) {
       return hash as Page;
     }
@@ -104,6 +118,7 @@ function App() {
         {currentPage === "get-started" && <IntakeQuestionsForm />}
         {currentPage === "faq" && <Faq />}
         {currentPage === "search" && <SearchResults />}
+        {currentPage === "hidden-icons-page" && <HiddenIconPage />}
       </main>
       <div
         className="scroll-position-indicator"

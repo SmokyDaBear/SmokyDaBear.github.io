@@ -55,6 +55,11 @@ section {
   max-width: 1200px;
   margin: 4rem auto;
 }
+@media (max-width: 1200px) {
+  section#services {
+    margin: 4rem max(1rem, 1vw);
+  }
+}
 .square-btn {
   width: max-content;
   background-color: var(--btn-primary-bg);
@@ -220,7 +225,7 @@ section {
   bottom: 24px;
   right: 24px;
   background-color: var(--accent-dark);
-  color: var(--text-hover);
+  color: var(--opacity-text);
   padding: 10px 16px;
   border-radius: var(--radius-sm);
   text-decoration: none;

@@ -96,7 +96,6 @@
 }
 .icon.hoverable:hover {
   stroke: var(--icon-stroke-hover);
-  fill: var(--icon-fill-hover);
   cursor: pointer;
 }
 .hamburger {
