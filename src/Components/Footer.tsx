@@ -1,9 +1,13 @@
-import { email, gitHub, linkedIn, linkIcon } from "../icons/icons";
+import { chevronUp, email, gitHub, linkedIn, linkIcon } from "../icons/icons";
+import { useTheme } from "../utils/themeHandler";
 import { ContactModal } from "./ContactModal";
 import { LogoImg } from "./LogoImg";
 import { useState } from "react";
-export function Footer() {
+import { Slider } from "./Slider";
+export function Footer({ scrollY }: { scrollY?: number }) {
+  const themeHandler = useTheme();
   const [modalOpen, setModalOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">(themeHandler.getTheme());
   return (
     <>
       <footer className="footer-container">
@@ -66,12 +70,35 @@ export function Footer() {
               </a>
             </div>
           </div>
+          <div className="footer-section">
+            <h3>Preferences</h3>
+            <div
+              className={"flex-row cursor-pointer"}
+              onClick={() => {
+                const newTheme = theme === "dark" ? "light" : "dark";
+                themeHandler.setTheme(newTheme);
+                setTheme(newTheme);
+              }}
+            >
+              {" "}
+              Switch to {theme === "light" ? "Dark" : "Light"} Mode
+              <Slider on={theme === "dark"} />
+            </div>
+          </div>
         </div>
 
         {/* Copyright Bar */}
         <div className="footer-copyright">
           <p>&copy; 2025 Jes Green | Verdant Webworks</p>
         </div>
+        {scrollY && scrollY > 300 && (
+          <div
+            className="back-to-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            {chevronUp("small")} Back to Top
+          </div>
+        )}
       </footer>
       {modalOpen && (
         <ContactModal closeModal={() => setModalOpen(!modalOpen)} />

@@ -58,7 +58,13 @@ export function ContactModal({ closeModal }: TContactModalProps) {
           <form onSubmit={handleSubmit}>
             <div className="input-wrap">
               <label htmlFor="first-name">First Name</label>
-              <input id="first-name" type="text" name="first-name" required />
+              <input
+                id="first-name"
+                type="text"
+                name="first-name"
+                required
+                placeholder="First name"
+              />
               <ValidationError
                 prefix="First Name"
                 field="first-name"
@@ -68,7 +74,12 @@ export function ContactModal({ closeModal }: TContactModalProps) {
 
             <div className="input-wrap">
               <label htmlFor="last-name">Last Name</label>
-              <input id="last-name" type="text" name="last-name" />
+              <input
+                id="last-name"
+                type="text"
+                name="last-name"
+                placeholder="Last name"
+              />
               <ValidationError
                 prefix="Last Name"
                 field="last-name"
@@ -77,7 +88,13 @@ export function ContactModal({ closeModal }: TContactModalProps) {
             </div>
             <div className="input-wrap">
               <label htmlFor="email">Email</label>
-              <input id="email" type="email" name="email" required />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="email@example.com"
+              />
               <ValidationError
                 prefix="Email"
                 field="email"
@@ -87,7 +104,12 @@ export function ContactModal({ closeModal }: TContactModalProps) {
 
             <div className="input-wrap">
               <label htmlFor="phone">Phone</label>
-              <input id="phone" type="tel" name="phone" />
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="(123) 456-7890"
+              />
               <ValidationError
                 prefix="Phone"
                 field="phone"
@@ -96,7 +118,13 @@ export function ContactModal({ closeModal }: TContactModalProps) {
             </div>
             <div className="input-wrap full-width">
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Your message here..."
+                maxLength={1000}
+              ></textarea>
               <ValidationError
                 prefix="Message"
                 field="message"
@@ -105,7 +133,7 @@ export function ContactModal({ closeModal }: TContactModalProps) {
             </div>
             <button
               type="submit"
-              className="call-to-action"
+              className="square-btn green-glow"
               disabled={state.submitting}
             >
               {state.submitting ? "Sending..." : "Send Message"}

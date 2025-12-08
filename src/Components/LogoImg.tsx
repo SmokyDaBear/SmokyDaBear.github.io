@@ -13,19 +13,22 @@ export function LogoImg({
       className="rotating-bg green-glow"
       style={{
         maxWidth: preferredSize,
+        maxHeight: preferredSize,
+        width: preferredSize,
+        height: preferredSize,
         padding: `${borderThickness}px`,
         margin: "1rem auto",
         borderRadius: borderRadius,
       }}
     >
       <img
-        src="/public/verdant-icon.svg"
+        src="/verdant-icon.svg"
         alt="Verdant Logo"
         style={{
           width: "100%",
           height: "100%",
           padding: "6px",
-          backgroundColor: "var(--bg-secondary)",
+          backgroundColor: "var(--bg-logo)",
           boxShadow: "inset  0 0 20px var(--verdant-green)",
           display: "block",
           margin: "0 auto",

@@ -1,0 +1,207 @@
+@charset "UTF-8";
+.form-container {
+  max-width: min(95%, 1000px);
+  margin: 1rem auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  text-align: center;
+}
+.form-container p.description {
+  font-style: normal;
+  font-size: 1rem;
+}
+.glass {
+  background-color: var(--color-opacity-20);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--accent);
+  color: var(--color-opacity-text);
+}
+.form-container form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.8rem, 2vw, 1.3rem);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .form-container form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+}
+.form-container form p {
+  font-size: 0.9rem;
+  grid-column: 1/-1;
+  margin-top: 0.5rem;
+  text-align: left;
+  margin-left: 0.2rem;
+  font-style: italic;
+}
+.form-container form button[type="submit"],
+.form-container form .square-btn {
+  grid-column: 1/-1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.form-container form .input-wrap {
+  width: 100%;
+  margin: 1.5rem auto 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-container form .input-wrap label {
+  position: absolute;
+  bottom: calc(100% + 0.4rem);
+  border: 1px solid var(--border);
+  left: 0.2rem;
+  padding: 0.05rem 0.6rem;
+  background-color: var(--opacity-dark-10);
+  font-weight: 100;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.form-container form .input-wrap input,
+.form-container form .input-wrap textarea,
+.form-container form .input-wrap select {
+  width: 100%;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-container form .input-wrap input:focus,
+.form-container form .input-wrap textarea:focus,
+.form-container form .input-wrap select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.form-container form .input-wrap input::-moz-placeholder,
+.form-container form .input-wrap textarea::-moz-placeholder,
+.form-container form .input-wrap select::-moz-placeholder {
+  color: var(--text-disabled);
+}
+.form-container form .input-wrap input::placeholder,
+.form-container form .input-wrap textarea::placeholder,
+.form-container form .input-wrap select::placeholder {
+  color: var(--text-disabled);
+}
+.form-container form .input-wrap select[multiple] option {
+  padding: 1rem 0.4rem;
+}
+.form-container form .input-wrap select[multiple] option[selected] {
+  background-color: var(--verdant-green);
+  color: var(--opacity-text);
+}
+.form-container form .input-wrap select[multiple] option[selected]::after {
+  content: " ✓";
+}
+.form-container form .input-wrap textarea {
+  min-height: 100px;
+  line-height: 1.5;
+  resize: none;
+  overflow-y: auto;
+}
+.form-container form .input-wrap.full-width {
+  grid-column: 1/-1;
+}
+.form-container form .multi-select {
+  display: grid;
+  gap: 0.6rem;
+  grid-column: 1/-1;
+}
+.form-container form .multi-option {
+  width: 100%;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: all 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+.form-container form .multi-option:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.form-container form .multi-option.selected {
+  background: var(--accent-dark);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  color: var(--opacity-text);
+}
+.form-container form .multi-option:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.form-container form .multi-option .check-box {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+.form-container form .multi-option.selected .check-box {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+.form-container form .multi-option .check-box svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  stroke: var(--accent-dark);
+  stroke-width: 3;
+  fill: none;
+}
+.form-container form .multi-option .option-label {
+  flex: 1;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (min-width: 768px) {
+  .form-container form .multi-select {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+.form-container form .custom-input {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-container form .custom-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.form-container form .custom-input::-moz-placeholder {
+  color: var(--text-disabled);
+  font-style: italic;
+}
+.form-container form .custom-input::placeholder {
+  color: var(--text-disabled);
+  font-style: italic;
+}

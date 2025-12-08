@@ -313,6 +313,116 @@ const verdantLogo = (size?: "large" | "small") => (
   </svg>
 );
 
+const gridIcon = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <rect x="3" y="3" width="7" height="7" strokeLinecap="round" />
+    <rect x="14" y="3" width="7" height="7" strokeLinecap="round" />
+    <rect x="3" y="14" width="7" height="7" strokeLinecap="round" />
+    <rect x="14" y="14" width="7" height="7" strokeLinecap="round" />
+  </svg>
+);
+
+const listIcon = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <line x1="4" y1="6" x2="20" y2="6" strokeLinecap="round" />
+    <line x1="4" y1="12" x2="20" y2="12" strokeLinecap="round" />
+    <line x1="4" y1="18" x2="20" y2="18" strokeLinecap="round" />
+  </svg>
+);
+
+const searchIcon = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <circle cx="11" cy="11" r="8" strokeLinecap="round" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" strokeLinecap="round" />
+  </svg>
+);
+
+const chevronUp = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M19.5 15l-7.5-7.5L4.5 15"
+    />
+  </svg>
+);
+const chevronRight = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+    />
+  </svg>
+);
+const chevronLeft = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15.75 19.5l-7.5-7.5 7.5-7.5"
+    />
+  </svg>
+);
+const chevronDown = (size?: "large" | "small") => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={"icon hoverable" + (size ? size : "")}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4.5 8.25l7.5 7.5 7.5-7.5"
+    />
+  </svg>
+);
+
 export {
   leftArrow,
   rightArrow,
@@ -330,4 +440,11 @@ export {
   gitHub,
   linkedIn,
   verdantLogo,
+  gridIcon,
+  listIcon,
+  searchIcon,
+  chevronUp,
+  chevronRight,
+  chevronLeft,
+  chevronDown,
 };

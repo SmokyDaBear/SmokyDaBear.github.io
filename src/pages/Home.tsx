@@ -1,22 +1,16 @@
 import { projects, services } from "../data";
 import { ServiceCard } from "../Components/ServiceCard";
-import { sectionSeparator } from "../icons/icons";
+import { gridIcon, listIcon, sectionSeparator } from "../icons/icons";
 import { Suspense, useState } from "react";
 import { ProjectCard } from "../Components/ProjectCard";
 import "../styles/project.css";
 
 export function Home() {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [isGridView, setIsGridView] = useState(!(window.innerWidth >= 768));
   return (
     <>
       <section id="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">Welcome to My Portfolio</h1>
-          <p className="hero-subtitle">
-            I'm a passionate developer specializing in creating amazing web
-            experiences.
-          </p>
-        </div>
         <Suspense
           fallback={
             <img src="/hero-image.jpg" alt="Hero" className="hero-image" />
@@ -34,6 +28,14 @@ export function Home() {
             Your browser does not support the video tag.
           </video>
         </Suspense>
+        <div className="hero-content">
+          <h1 className="hero-title">Welcome to My Portfolio</h1>
+          <p className="hero-subtitle">
+            I'm a passionate developer specializing in creating amazing web
+            experiences.
+          </p>
+        </div>
+        <div className="fade-out-overlay"></div>
         {sectionSeparator()}
       </section>
 
@@ -43,9 +45,9 @@ export function Home() {
           Explore the range of services I provide to help bring your ideas to
           life.
         </p>
-        <div className="servicesContainer">
-          {services.map((service) => (
-            <ServiceCard key={service.name} service={service} />
+        <div className="services-container">
+          {services.map((service, index) => (
+            <ServiceCard key={service.name} service={service} index={index} />
           ))}
         </div>
       </section>
@@ -55,7 +57,23 @@ export function Home() {
           A selection of my recent work showcasing my skills and expertise.
         </p>
 
-        <div className="projects-container">
+        <div className="center-flex">
+          <button
+            className={"toggle-btn " + (isGridView ? "current" : "")}
+            onClick={() => setIsGridView(true)}
+          >
+            Grid
+            {gridIcon()}
+          </button>
+          <button
+            className={"toggle-btn " + (isGridView ? "" : "current")}
+            onClick={() => setIsGridView(false)}
+          >
+            List {listIcon()}
+          </button>
+        </div>
+
+        <div className={`projects-container ${isGridView ? "grid" : "list"}`}>
           {projects.map((project) => (
             <ProjectCard
               key={project.id}

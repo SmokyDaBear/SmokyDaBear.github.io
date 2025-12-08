@@ -1,5 +1,7 @@
-import type { project } from "../data";
+import type { project } from "../types";
 import { gitHub, linkIcon } from "../icons/icons";
+import { useInView } from "../utils/useInView";
+import { useRef } from "react";
 
 export function ProjectCard({
   project,
@@ -8,8 +10,16 @@ export function ProjectCard({
   project: project;
   hide?: boolean;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, 100);
+
   return (
-    <div className={`project-card ${hide ? "hidden" : ""}`}>
+    <div
+      ref={ref}
+      className={`project-card ${hide ? "hidden" : ""} ${
+        isInView ? " animate" : ""
+      }`}
+    >
       <img src={project.image} alt={project.title} className="project-image" />
       <div className="project-content">
         <div className="project-header">
