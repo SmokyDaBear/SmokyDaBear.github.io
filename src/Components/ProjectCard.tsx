@@ -1,5 +1,5 @@
 import type { project } from "../types";
-import { gitHub, linkIcon } from "../icons/icons";
+import { arrowUpRight, gitHub } from "../icons/icons";
 import { useInView } from "../utils/useInView";
 import { useRef } from "react";
 
@@ -41,7 +41,7 @@ export function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {linkIcon("small")}
+              {arrowUpRight("small")}
               View Demo
             </a>
           )}

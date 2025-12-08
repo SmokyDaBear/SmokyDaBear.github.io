@@ -20,15 +20,15 @@ export function ContactModal({ closeModal }: TContactModalProps) {
           }}
         >
           <div className="form-container modal-content">
+            <span className="close-btn" onClick={closeModal}>
+              {closeIcon()}
+            </span>
             <LogoImg />
             <h2>Thank You!</h2>
             <p>
               Your message has been sent successfully. I will get back to you
               soon.
             </p>
-            <button className="call-to-action margin-auto" onClick={closeModal}>
-              {closeIcon()}
-            </button>
           </div>
         </div>
       </>

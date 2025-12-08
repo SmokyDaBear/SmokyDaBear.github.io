@@ -1,6 +1,12 @@
 import { projects, services } from "../data";
 import { ServiceCard } from "../Components/ServiceCard";
-import { gridIcon, listIcon, sectionSeparator } from "../icons/icons";
+import {
+  chevronDown,
+  chevronUp,
+  gridIcon,
+  listIcon,
+  sectionSeparator,
+} from "../icons/icons";
 import { Suspense, useState } from "react";
 import { ProjectCard } from "../Components/ProjectCard";
 import "../styles/project.css";
@@ -86,7 +92,11 @@ export function Home() {
           onClick={() => setShowAllProjects(!showAllProjects)}
           className="square-btn green-glow m-auto m-b-md"
         >
-          {showAllProjects ? "Show Featured" : "Show All"}
+          {showAllProjects ? (
+            <>{chevronUp("small")} Show Featured</>
+          ) : (
+            <>{chevronDown("small")} Show All</>
+          )}
         </button>
       </section>
     </>
