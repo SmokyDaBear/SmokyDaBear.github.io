@@ -103,9 +103,11 @@
   height: 24px;
   position: relative;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  margin-right: 10px;
 }
 .hamburger div {
   height: 4px;

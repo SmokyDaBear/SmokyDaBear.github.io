@@ -65,10 +65,17 @@ function App() {
             active: menuActive,
             handleClick: () => setMenuActive(!menuActive),
           })}
-          <div className="header-logo no-show-mobile">
-            <LogoImg preferredSize={50} borderRadius={12} borderThickness={2} />
-          </div>
-          <h1 className="header-title green-text">Verdant Webworks</h1>
+          <h1 className="header-title green-text">
+            {" "}
+            <div className="header-logo">
+              <LogoImg
+                preferredSize={50}
+                borderRadius={12}
+                borderThickness={2}
+              />
+            </div>{" "}
+            Verdant Webworks
+          </h1>
           <ul className={"nav-links " + (menuActive ? "active" : "")}>
             {["home", "about", "services"].map((page) => (
               <li key={page}>
