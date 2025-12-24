@@ -18,7 +18,7 @@ import {
   phone,
   rightArrow,
   searchIcon,
-  sEO,
+  plus,
   uI,
   warning,
   webDev,
@@ -51,7 +51,7 @@ export function HiddenIconPage() {
           {arrowUpRight("large")}
           {webDev("large")}
           {uI("large")}
-          {sEO("large")}
+          {plus("large")}
           {phone("large")}
           {email("large")}
           {gitHub("large")}

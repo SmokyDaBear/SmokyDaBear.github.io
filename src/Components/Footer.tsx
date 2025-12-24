@@ -1,9 +1,10 @@
-import { chevronUp, email, gitHub, linkedIn, linkIcon } from "../icons/icons";
+import { arrowUpRight, chevronUp, email, gitHub, linkedIn } from "../icons/icons";
 import { useTheme } from "../utils/themeHandler";
-import { ContactModal } from "./ContactModal";
+import { ContactForm } from "./ContactForm";
 import { LogoImg } from "./LogoImg";
 import { useState } from "react";
 import { Slider } from "./Slider";
+import { ModalWrapper } from "./ModalWrapper";
 export function Footer({ scrollY }: { scrollY?: number }) {
   const themeHandler = useTheme();
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,7 +36,7 @@ export function Footer({ scrollY }: { scrollY?: number }) {
               className="square-btn green-glow"
               onClick={() => setModalOpen(!modalOpen)}
             >
-              {linkIcon()}
+              {arrowUpRight()}
               Contact Me
             </button>
           </div>
@@ -101,7 +102,9 @@ export function Footer({ scrollY }: { scrollY?: number }) {
         )}
       </footer>
       {modalOpen && (
-        <ContactModal closeModal={() => setModalOpen(!modalOpen)} />
+        <ModalWrapper closeModal={() => setModalOpen(!modalOpen)}>
+          <ContactForm />
+        </ModalWrapper>
       )}
     </>
   );

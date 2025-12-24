@@ -69,7 +69,7 @@ function App() {
             {" "}
             <div className="header-logo">
               <LogoImg
-                preferredSize={50}
+                preferredSize={44}
                 borderRadius={12}
                 borderThickness={2}
               />
@@ -106,7 +106,7 @@ function App() {
             <li>
               <a
                 href="#get-started"
-                className="square-btn green-glow hire-btn"
+                className={"square-btn green-glow hire-btn" + (currentPage === "get-started" ? " active" : "")}
                 onClick={() => {
                   setCurrentPage("get-started");
                   setMenuActive(false);
@@ -119,7 +119,7 @@ function App() {
         </nav>
       </header>
       <main>
-        {currentPage === "home" && <Home />}
+        {currentPage === "home" && <><Home /><Faq /></>}
         {currentPage === "about" && <About />}
         {currentPage === "services" && <Services />}
         {currentPage === "get-started" && <IntakeQuestionsForm />}
@@ -130,11 +130,10 @@ function App() {
       <div
         className="scroll-position-indicator"
         style={{
-          width: `${
-            (currentScrollY /
-              (document.body.scrollHeight - window.innerHeight)) *
+          width: `${(currentScrollY /
+            (document.body.scrollHeight - window.innerHeight)) *
             100
-          }%`,
+            }%`,
           backgroundColor: "var(--verdant-green)",
           position: "fixed",
           bottom: 0,

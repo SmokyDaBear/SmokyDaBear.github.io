@@ -1,3 +1,5 @@
+import { EndlessCarousel } from "../Components/PageSections/EndlessCarousel";
+
 export function About() {
   return (
     <section className="text-center center-flex flex-col">
@@ -9,18 +11,23 @@ export function About() {
         alt="Profile Picture"
         className="profile-picture"
       />
-      <p>
-        Welcome to my portfolio! I'm Jess, a passionate web developer with a
-        knack for creating beautiful and functional websites.
-      </p>
-      <p>
-        I am focused on delivering websites that bring in customers and leave a
-        lasting impression. I'm continually gaining technical knowledge and
-        improving my skills. I'm always open to new projects, so feel free to
-        send an email or use the contact form at the bottom of the page to get
-        in touch!
-      </p>
+      <div className="text-block">
+        <p>
+          Welcome to my portfolio! I'm Jess, a passionate web developer with a
+          knack for creating beautiful and functional websites.
+        </p>
+        <p>
+          I am focused on delivering websites that bring in customers and leave a
+          lasting impression. I'm continually gaining technical knowledge and
+          improving my skills.
+        </p>
+        <p>I have been fascinated with computers and technology from a young age, which has driven my passion for web development. Starting with modding video games and building custom PCs, I eventually transitioned to creating websites and web applications.</p>
+        <p>In my spare time, I also enjoy building projects with Arduinos, hiking, photography, and exploring new
+          technologies. I also have a background in Automotive, with experience in parts sales, auto repair, and service writing.
+        </p>
+      </div>
       <h3>Skills & Technologies</h3>
+      <EndlessCarousel />
       <ul className="unstyled-list skills-list">
         <li>HTML</li>
         <li>CSS</li>

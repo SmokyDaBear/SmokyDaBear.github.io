@@ -38,7 +38,7 @@ export function IntakeQuestionsForm() {
               {
                 id: "industry",
                 label: "Industry",
-                placeholder: "e.g., Retail, Food Service, Tech, etc.",
+                placeholder: "Industry e.g., Retail, Food Service, Tech, etc.",
               },
               {
                 id: "business-info",

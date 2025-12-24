@@ -125,7 +125,7 @@ export const projects: project[] = [
     image: SitePreviews.encrypter,
     title: "Message Encryption Site",
     description:
-      "Encrypts messages using railfence cipher and rot13 techniques",
+      "Encrypts messages using railfence and caesar cipher techniques",
     tags: ["JavaScript", "Cryptography"],
     sourceUrl: "https://github.com/SmokyDaBear/message-encryption-site",
     pageUrl: "https://smokydabear.github.io/message-encryption-site/",
