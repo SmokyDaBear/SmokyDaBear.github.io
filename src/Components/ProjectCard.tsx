@@ -16,9 +16,8 @@ export function ProjectCard({
   return (
     <div
       ref={ref}
-      className={`project-card ${hide ? "hidden" : ""} ${
-        isInView ? " animate" : ""
-      }`}
+      className={`project-card ${hide ? "hidden" : ""} ${isInView ? " animate" : ""
+        }`}
     >
       <img src={project.image} alt={project.title} className="project-image" />
       <div className="project-content">
@@ -37,7 +36,7 @@ export function ProjectCard({
           {project.pageUrl && (
             <a
               href={project.pageUrl}
-              className="square-btn green-glow"
+              className="ripple-btn "
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -48,7 +47,7 @@ export function ProjectCard({
           {project.sourceUrl && (
             <a
               href={project.sourceUrl}
-              className="square-btn green-glow"
+              className="ripple-btn "
               target="_blank"
               rel="noopener noreferrer"
             >

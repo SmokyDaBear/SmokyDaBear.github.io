@@ -33,7 +33,7 @@ export function Footer({ scrollY }: { scrollY?: number }) {
               {email()} Email
             </a>
             <button
-              className="square-btn green-glow"
+              className="square-btn bg-shift"
               onClick={() => setModalOpen(!modalOpen)}
             >
               {arrowUpRight()}

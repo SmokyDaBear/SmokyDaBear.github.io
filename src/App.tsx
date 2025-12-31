@@ -11,6 +11,7 @@ import { SearchResults } from "./pages/SearchResults";
 import { ScrollHandler } from "./utils/scrollHandler";
 import { useTheme } from "./utils/themeHandler";
 import { HiddenIconPage } from "./icons/HiddenIconPage";
+import "./styles/animations.css";
 
 function App() {
   type Page =
@@ -65,7 +66,7 @@ function App() {
             active: menuActive,
             handleClick: () => setMenuActive(!menuActive),
           })}
-          <h1 className="header-title green-text">
+          <h1 className="header-title">
             {" "}
             <div className="header-logo">
               <LogoImg
@@ -77,10 +78,10 @@ function App() {
             Verdant Webworks
           </h1>
           <ul className={"nav-links " + (menuActive ? "active" : "")}>
-            {["home", "about", "services"].map((page) => (
+            {["home", "about", "services", "faq"].map((page) => (
               <li key={page}>
                 <a
-                  className={currentPage === page ? "active" : ""}
+                  className={currentPage === page ? "accent-underline active" : "accent-underline"}
                   href={"#" + page}
                   onClick={() => {
                     setCurrentPage(page as Page);
@@ -93,20 +94,8 @@ function App() {
             ))}
             <li>
               <a
-                className={currentPage === "faq" ? "active" : ""}
-                href="#faq"
-                onClick={() => {
-                  setCurrentPage("faq");
-                  setMenuActive(false);
-                }}
-              >
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a
                 href="#get-started"
-                className={"square-btn green-glow hire-btn" + (currentPage === "get-started" ? " active" : "")}
+                className={"square-btn bg-shift hire-btn " + (currentPage === "get-started" ? " active" : "")}
                 onClick={() => {
                   setCurrentPage("get-started");
                   setMenuActive(false);
@@ -119,7 +108,7 @@ function App() {
         </nav>
       </header>
       <main>
-        {currentPage === "home" && <><Home /><Faq /></>}
+        {currentPage === "home" && <><Home /></>}
         {currentPage === "about" && <About />}
         {currentPage === "services" && <Services />}
         {currentPage === "get-started" && <IntakeQuestionsForm />}

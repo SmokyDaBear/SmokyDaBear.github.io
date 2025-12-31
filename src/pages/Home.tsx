@@ -6,6 +6,7 @@ import { Projects } from "../Components/PageSections/Projects";
 import { WhyVerdant } from "../Components/PageSections/WhyVerdant";
 import { Contact } from "../Components/PageSections/Contact";
 import { Workflow } from "../Components/PageSections/Workflow";
+import Faq from "./Faq";
 
 export function Home() {
 
@@ -17,6 +18,7 @@ export function Home() {
       <Projects />
       <Workflow />
       <Contact />
+      <Faq />
     </>
   );
 }

@@ -109,7 +109,7 @@ export function ContactForm() {
           </div>
           <button
             type="submit"
-            className="square-btn green-glow"
+            className="square-btn bg-shift submit-btn"
             disabled={state.submitting}
           >
             {state.submitting ? "Sending..." : "Send Message"}

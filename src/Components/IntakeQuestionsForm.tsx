@@ -160,7 +160,7 @@ export function IntakeQuestionsForm() {
             question="Finally, we'd love to know how you found us!"
           />
           <button
-            className="square-btn"
+            className="square-btn submit-btn bg-shift"
             type="submit"
             disabled={state.submitting}
           >

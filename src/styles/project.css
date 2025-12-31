@@ -6,6 +6,7 @@
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
+  width: 100%;
 }
 .project-card.hidden {
   display: none;
@@ -20,11 +21,14 @@
   gap: 24px;
   margin: 24px auto;
   max-width: 1200px;
-  padding: 0 12px;
+  padding: 0;
 }
 .projects-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.projects-container.grid .project-card {
+  aspect-ratio: 1/1;
 }
 .projects-container.grid .project-card.animate {
   animation: slideSlightUp 0.8s ease-out forwards;
@@ -86,10 +90,6 @@
   flex-wrap: wrap;
 }
 
-.list .project-links {
-  flex-wrap: nowrap;
-}
-
 .project-links .square-btn {
   font-size: 0.9rem;
   padding: 10px 12px;
@@ -148,8 +148,6 @@
 
 @media (min-width: 900px) {
   .project-card {
-    width: 100%;
-    height: 250px;
     display: flex;
     gap: 16px;
     align-items: center;
@@ -169,23 +167,10 @@
   .project-card {
     text-align: center;
   }
-  .grid .project-card {
-    aspect-ratio: 1/1;
-  }
   .list .project-card {
-    width: -moz-max-content;
-    width: max-content;
-    max-width: 98%;
     padding: 16px 8px;
   }
-  .project-links .square-btn {
+  .project-links .ripple-btn {
     padding: 6px 12px;
-  }
-}
-@media (max-width: 400px) {
-  .list .project-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 }/*# sourceMappingURL=project.css.map */

@@ -45,7 +45,7 @@ export function Projects() {
     </div>
     <button
       onClick={() => setShowAllProjects(!showAllProjects)}
-      className="square-btn green-glow m-auto m-b-md"
+      className="square-btn m-auto m-b-md"
     >
       {showAllProjects ? (
         <>{chevronUp("small")} Show Featured</>

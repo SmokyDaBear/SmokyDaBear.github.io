@@ -35,7 +35,7 @@ export function ServiceCardHireLink() {
         I'm excited to help bring your project to life. Let's discuss how I can
         contribute to your success.
       </p>
-      <a href="#contact" className="square-btn hire-button">
+      <a href="#contact" className="square-btn hire-button bg-shift">
         Hire Me
       </a>
     </div>

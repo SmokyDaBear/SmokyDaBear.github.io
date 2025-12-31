@@ -28,15 +28,16 @@ export function Hero() {
         experiences.
       </p>
       <div className="buttons">
-        <a href="#projects" className="square-btn">
+        <a href="#projects" className="square-btn bg-shift">
           View Projects
         </a>
-        <a href="#get-started" className="square-btn">
+        <a href="#get-started" className="square-btn bg-shift">
           Hire Me
         </a>
       </div>
     </div>
-    <div className="fade-out-overlay"></div>
+    <div className="fade-out overlay"></div>
+    <div className="blur overlay"></div>
     {sectionSeparator()}
   </section>
 
