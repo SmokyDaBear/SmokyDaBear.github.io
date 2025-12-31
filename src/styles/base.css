@@ -120,7 +120,7 @@ section {
 #contact {
   width: 100%;
   max-width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 
 #hero {
@@ -156,7 +156,7 @@ section {
 .hero-content h1,
 .header-title {
   font-family: "Bebas Neue", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: -0.1rem;
 }
 .hero-content p {

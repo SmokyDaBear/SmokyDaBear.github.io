@@ -1,4 +1,4 @@
-import { email, gitHub, linkedIn, upWork } from "../../icons/icons";
+import { email, gitHub, linkedIn, sectionSeparator, upWork } from "../../icons/icons";
 import { ContactForm } from "../ContactForm";
 
 export function Contact() {
@@ -50,5 +50,6 @@ export function Contact() {
         <ContactForm />
       </div>
     </div>
+    {sectionSeparator()}
   </section>
 }

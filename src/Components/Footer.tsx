@@ -1,4 +1,4 @@
-import { arrowUpRight, chevronUp, email, gitHub, linkedIn } from "../icons/icons";
+import { arrowUpRight, chevronUp, email, gitHub, linkedIn, sectionSeparator } from "../icons/icons";
 import { useTheme } from "../utils/themeHandler";
 import { ContactForm } from "./ContactForm";
 import { LogoImg } from "./LogoImg";
@@ -11,6 +11,7 @@ export function Footer({ scrollY }: { scrollY?: number }) {
   const [theme, setTheme] = useState<"light" | "dark">(themeHandler.getTheme());
   return (
     <>
+      {sectionSeparator(2)}
       <footer className="footer-container">
         <div className="footer-grid">
           {/* Logo & Branding Section */}

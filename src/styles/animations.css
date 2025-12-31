@@ -139,6 +139,7 @@
 .ripple-btn:hover {
   box-shadow: 0 0 12px var(--accent);
   border-color: var(--btn-primary-text);
+  color: var(--text-primary);
 }
 .ripple-btn::after {
   content: "";
@@ -156,6 +157,10 @@
 }
 .ripple-btn:first-child {
   border: 1px solid var(--btn-primary-text);
+  color: var(--text-primary);
+}
+.ripple-btn:first-child:hover {
+  color: var(--btn-primary-text);
 }
 .ripple-btn:first-child::after {
   width: 0;
