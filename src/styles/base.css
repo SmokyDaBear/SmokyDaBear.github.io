@@ -82,12 +82,17 @@ section {
   padding: 0.8rem 1.6rem;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    box-shadow 0.3s;
   display: inline-flex;
   margin: 0 6px;
   align-items: center;
   gap: 8px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.5),
+    -1px -1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
@@ -234,7 +239,9 @@ section {
   padding: 8px 12px;
   text-decoration: none;
   color: var(--text-primary);
-  transition: border-color 0.3s, color 0.3s;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
   border-bottom: 2px solid transparent;
 }
 .accent-underline.active,
@@ -319,7 +326,10 @@ section {
   border-radius: var(--radius-sm);
   text-decoration: none;
   box-shadow: var(--shadow-md);
-  transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    opacity 0.3s;
   animation: slideInRight 0.5s ease-out;
   opacity: 0.4;
   cursor: pointer;
@@ -375,7 +385,10 @@ section {
   color: var(--text-primary);
   text-decoration: none;
   margin: 8px 0;
-  transition: color 0.3s, transform 0.3s, background-color 0.3s;
+  transition:
+    color 0.3s,
+    transform 0.3s,
+    background-color 0.3s;
   padding: 0.6rem 1rem;
   border-radius: var(--radius-sm);
 }
@@ -510,7 +523,9 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 .toggle-btn:hover,
 .toggle-btn.current {
@@ -528,7 +543,10 @@ section {
   padding: 16px;
   margin-bottom: 12px;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    color 0.3s;
 }
 .faq-card p {
   visibility: hidden;
@@ -563,7 +581,10 @@ section {
   display: inline-flex;
   gap: 6px;
   background-color: var(--accent-dark);
-  transition: box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
+  transition:
+    box-shadow 0.3s,
+    background-color 0.3s,
+    border-color 0.3s;
 }
 .search-bar {
   width: 100%;
@@ -573,6 +594,7 @@ section {
   border-radius: 1000px 0 0 1000px;
   font-size: 1rem;
   background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 .search-bar-container:focus-within,
 .search-bar-container:hover,
@@ -606,7 +628,9 @@ section {
   margin: 12px 0;
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
   display: flex;
   gap: 16px;
   align-items: center;
