@@ -47,7 +47,7 @@ function SearchResultCard(result: SearchResult) {
 
         <a
           href={result.link || "#"}
-          className="square-btn green-glow"
+          className="square-btn bg-shift"
           target="_blank"
           rel="noopener noreferrer"
         >
