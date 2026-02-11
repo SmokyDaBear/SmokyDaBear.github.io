@@ -29,7 +29,7 @@ export function Contact() {
         </a>
         <p className="text-secondary">Social Links</p>
         <a
-          href="https://github.com/SmokyDaBear/SmokyDaBear.github.io"
+          href="https://github.com/SmokyDaBear"
           target="_blank"
           rel="noopener noreferrer"
           className="page-link"
