@@ -5,7 +5,7 @@
   position: relative;
   text-align: center;
   max-width: 100%;
-  background-color: var(--bg-two);
+  background-color: var(--bg-secondary);
   border: 2px solid var(--verdant-alt);
   border-radius: var(--radius-md);
   box-shadow:
