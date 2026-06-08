@@ -12,7 +12,7 @@ import { ProjectCard } from "../../Components/ProjectCard";
 export function Projects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [isGridView, setIsGridView] = useState(!(window.innerWidth >= 768));
-  return <section id="projects">
+  return <section id="projects" className="projects-section">
     <h2 className="section-title">Featured Projects</h2>
     <p className="section-subtitle">
       A selection of my recent work showcasing my skills and expertise.

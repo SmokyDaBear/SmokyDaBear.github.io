@@ -22,17 +22,18 @@ export function Hero() {
       </video>
     </Suspense>
     <div className="hero-content">
-      <h1 className="hero-title">Welcome to My Portfolio</h1>
+      <h1 className="hero-title">Grow Your<br /><span className="hero-accent">Business</span></h1>
       <p className="hero-subtitle">
-        I'm a passionate developer specializing in creating amazing web
-        experiences.
+        Verdant Webworks builds custom, high-performance websites tailored to
+        your brand — responsive, polished, and designed to make a lasting first
+        impression.
       </p>
       <div className="buttons">
         <a href="#projects" className="square-btn bg-shift">
-          View Projects
+          View My Work
         </a>
         <a href="#get-started" className="square-btn bg-shift">
-          Hire Me
+          Start a Project
         </a>
       </div>
     </div>

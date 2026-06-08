@@ -86,7 +86,11 @@
   border: 1px solid transparent;
   overflow: hidden;
   letter-spacing: -0.03rem;
-  transition: color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
   z-index: 1;
 }
 .bg-shift::after {
@@ -147,7 +151,9 @@
   background: var(--accent-dark);
   border-radius: 50%;
   z-index: -1;
-  transition: width 0.4s, height 0.6s;
+  transition:
+    width 0.4s,
+    height 0.6s;
   width: 200%;
   height: 200%;
 }
@@ -156,11 +162,12 @@
   height: 0;
 }
 .ripple-btn:first-child {
-  border: 1px solid var(--btn-primary-text);
+  border: 1px solid var(--text-primary);
   color: var(--text-primary);
 }
 .ripple-btn:first-child:hover {
   color: var(--btn-primary-text);
+  border-color: var(--btn-primary-text);
 }
 .ripple-btn:first-child::after {
   width: 0;

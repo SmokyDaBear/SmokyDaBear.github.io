@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from "@formspree/react";
+import { email as emailIcon, paperAirplane } from "../icons/icons";
 
 
 export function ContactForm() {
@@ -10,6 +11,7 @@ export function ContactForm() {
 
         <div className="form-container">
           <h2>Thank You!</h2>
+          {paperAirplane("large")}
           <p>
             Your message has been sent successfully. I will get back to you
             soon.
@@ -26,6 +28,9 @@ export function ContactForm() {
         className="form-container"
 
       >
+        <div className="form-icon-wrap">
+          {emailIcon("large")}
+        </div>
         <h2>Contact Me</h2>
         <p>
           Fill out this form to get in touch with me. I'm always open to new
@@ -112,7 +117,7 @@ export function ContactForm() {
             className="square-btn bg-shift submit-btn"
             disabled={state.submitting}
           >
-            {state.submitting ? "Sending..." : "Send Message"}
+            {state.submitting ? "Sending..." : "Send Message"} {paperAirplane("small")}
           </button>
         </form>
       </div>

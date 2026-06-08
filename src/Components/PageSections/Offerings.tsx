@@ -2,10 +2,10 @@ import { services } from "../../data";
 import { ServiceCard, ServiceCardHireLink } from "../ServiceCard";
 export function Offerings() {
   return <section id="services">
-    <h2 className="section-title">What I Offer</h2>
+    <h2 className="section-title">Services</h2>
     <p className="section-subtitle">
-      Explore the range of services I provide to help bring your ideas to
-      life.
+      End-to-end web development — from initial concept to a polished,
+      production-ready product.
     </p>
     <div className="services-container">
       {services.map((service, index) => (

@@ -62,14 +62,6 @@ export function Footer({ scrollY }: { scrollY?: number }) {
               >
                 {linkedIn()} LinkedIn
               </a>
-              <a
-                href="mailto:verdantwebworks@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                {email()} Email
-              </a>
             </div>
           </div>
           <div className="footer-section">

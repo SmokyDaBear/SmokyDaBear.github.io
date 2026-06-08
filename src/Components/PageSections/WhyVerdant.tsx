@@ -36,37 +36,64 @@ const commitments = [
   },
 ];
 
-const CommitmentListItem = ({ icon, title, description }: { icon: JSX.Element, title: string, description: string }) => {
+const CommitmentListItem = ({
+  icon,
+  title,
+  description,
+}: {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}) => {
   const ref = useRef<HTMLLIElement>(null);
   const isInView = useInView(ref, 100);
   return (
-    <li ref={ref} className={`commitment-item ${isInView ? " animate" : ""}`}>
-      <div className="title">{icon}{title}</div>
+    <li ref={ref} className={`commitment-item${isInView ? " animate" : ""}`}>
+      <div className="title">
+        {icon}
+        {title}
+      </div>
       <p>{description}</p>
     </li>
-  )
+  );
 };
 
 export function WhyVerdant() {
-
   return (
-    < section id="why-us">
-      <LogoImg preferredSize={96} borderRadius={16} borderThickness={4} />
-      <h2 className="section-title">Why Verdant?</h2>
-      <p className="section-subtitle">
-        I'm Jess, a dedicated developer committed to delivering high-quality web solutions that exceed your expectations.
-      </p>
-      <br />
-      <p className="section-subtitle">Considering that the first thing your customer's usually see is your website, It is more important than ever to make a great first impression.
-        I specialize in creating visually appealing, user-friendly, and responsive websites that not only attract visitors but also convert them into loyal customers.
-      </p>
+    <section id="why-us" className="bg-two">
+      <div className="why-layout">
+        <div className="why-text-card">
+          <div className="why-logo-wrap">
+            <LogoImg preferredSize={120} borderRadius={12} borderThickness={2} />
+          </div>
+          <h2 className="why-heading">Why Verdant?</h2>
+          <p className="why-text">
+            I'm Jess, a web developer from Tulsa with a passion for design and a focus on building clean,
+            high-performance websites that
+            reflect your brand and drive real results.
+          </p>
+          <p className="why-text">
+            Your website is often the first thing a potential customer sees. That
+            first impression sets the tone for your entire business. I build
+            sites that are visually compelling, intuitive to use, and engineered
+            to turn visitors into clients.
+          </p>
+        </div>
 
-      <h3>My Commitments to You</h3>
-      <ul className="commitments-list">
-        {commitments.map((commitment, index) =>
-          <CommitmentListItem key={index} icon={commitment.icon} title={commitment.title} description={commitment.description} />
-        )}
-      </ul>
+        <div className="why-commitments">
+          <h3 className="commitments-heading">My Commitments to You</h3>
+          <ul className="commitments-list">
+            {commitments.map((commitment, index) => (
+              <CommitmentListItem
+                key={index}
+                icon={commitment.icon}
+                title={commitment.title}
+                description={commitment.description}
+              />
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }

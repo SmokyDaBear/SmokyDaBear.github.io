@@ -1,10 +1,40 @@
 @charset "UTF-8";
 .form-container {
-  margin: 1rem auto;
-  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(0.6rem, 4vw, 2rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
   position: relative;
   text-align: center;
   max-width: 100%;
+  background-color: var(--bg-two);
+  border: 2px solid var(--verdant-alt);
+  border-radius: var(--radius-md);
+  box-shadow:
+    0 0 10px rgba(25, 255, 197, 0.12),
+    0 0 32px rgba(25, 255, 197, 0.06),
+    8px 8px 0 rgba(25, 255, 197, 0.35);
+}
+[data-theme="light"] .form-container {
+  border-color: var(--verdant-green);
+  box-shadow:
+    0 0 8px rgba(7, 116, 56, 0.18),
+    0 0 24px rgba(7, 116, 56, 0.06),
+    8px 8px 0 rgba(7, 116, 56, 0.28);
+}
+.form-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--verdant-alt);
+}
+[data-theme="light"] .form-icon-wrap {
+  color: var(--verdant-green);
+}
+.form-container h2 {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 6px;
 }
 .form-container p.description {
   font-style: normal;
@@ -20,8 +50,9 @@
 .form-container form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: clamp(0.8rem, 2vw, 1.3rem);
+  gap: clamp(1rem, 2vw, 1.4rem);
   width: 100%;
+  margin-top: 1.2rem;
 }
 @media (min-width: 768px) {
   .form-container form {
@@ -41,7 +72,7 @@
 .form-container form .square-btn {
   grid-column: 1/-1;
   max-width: 250px;
-  margin: 0 auto;
+  margin: 0.5rem auto 0;
 }
 .form-container form .input-wrap {
   max-width: 100%;
@@ -49,39 +80,69 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .form-container form .input-wrap label {
-  visibility: hidden;
-  display: none;
+  visibility: visible;
+  display: block;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verdant-alt);
+  text-align: left;
+}
+[data-theme="light"] .form-container form .input-wrap label {
+  color: var(--verdant-green);
 }
 .form-container form .input-wrap input,
 .form-container form .input-wrap textarea,
 .form-container form .input-wrap select {
   max-width: 100%;
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  padding: 0.55rem 0.3rem;
+  background-color: rgba(25, 255, 197, 0.04);
+  color: var(--text-primary);
+  border: none;
+  border-bottom: 2px solid rgba(25, 255, 197, 0.28);
+  border-radius: 0;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: clamp(0.9rem, 2vw, 1rem);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+[data-theme="light"] .form-container form .input-wrap input,
+[data-theme="light"] .form-container form .input-wrap textarea,
+[data-theme="light"] .form-container form .input-wrap select {
+  background-color: rgba(7, 116, 56, 0.05);
+  border-bottom-color: rgba(7, 116, 56, 0.3);
+  color: var(--text-primary);
 }
 .form-container form .input-wrap input:focus,
 .form-container form .input-wrap textarea:focus,
 .form-container form .input-wrap select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--verdant-alt);
+  background-color: rgba(25, 255, 197, 0.08);
+}
+[data-theme="light"] .form-container form .input-wrap input:focus,
+[data-theme="light"] .form-container form .input-wrap textarea:focus,
+[data-theme="light"] .form-container form .input-wrap select:focus {
+  border-bottom-color: var(--verdant-green);
+  background-color: rgba(7, 116, 56, 0.08);
 }
 .form-container form .input-wrap input::-moz-placeholder,
 .form-container form .input-wrap textarea::-moz-placeholder,
 .form-container form .input-wrap select::-moz-placeholder {
   color: var(--text-disabled);
+  font-style: italic;
 }
 .form-container form .input-wrap input::placeholder,
 .form-container form .input-wrap textarea::placeholder,
 .form-container form .input-wrap select::placeholder {
   color: var(--text-disabled);
+  font-style: italic;
 }
 .form-container form .input-wrap select[multiple] option {
   padding: 1rem 0.4rem;
@@ -110,59 +171,90 @@
 .form-container form .multi-option {
   width: 100%;
   padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(25, 255, 197, 0.18);
+  border-radius: 8px;
   font-size: clamp(0.9rem, 2vw, 1rem);
-  transition: all 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-radius: 8px;
   cursor: pointer;
   text-align: left;
 }
+[data-theme="light"] .form-container form .multi-option {
+  border-color: rgba(7, 116, 56, 0.18);
+  color: var(--text-primary);
+}
 .form-container form .multi-option:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(25, 255, 197, 0.5);
+  box-shadow: 0 0 6px rgba(25, 255, 197, 0.1);
+}
+[data-theme="light"] .form-container form .multi-option:hover {
+  border-color: rgba(7, 116, 56, 0.5);
+  box-shadow: 0 0 6px rgba(7, 116, 56, 0.1);
 }
 .form-container form .multi-option.selected {
-  background: var(--accent-dark);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
-  color: var(--opacity-text);
+  background-color: transparent;
+  border: 2px solid var(--verdant-alt);
+  box-shadow:
+    0 0 10px rgba(25, 255, 197, 0.18),
+    0 0 3px rgba(25, 255, 197, 0.1);
+  color: var(--text-primary);
+}
+[data-theme="light"] .form-container form .multi-option.selected {
+  border-color: var(--verdant-green);
+  box-shadow:
+    0 0 10px rgba(7, 116, 56, 0.18),
+    0 0 3px rgba(7, 116, 56, 0.1);
 }
 .form-container form .multi-option:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--verdant-alt);
+  outline-offset: 2px;
+}
+[data-theme="light"] .form-container form .multi-option:focus-visible {
+  outline-color: var(--verdant-green);
 }
 .form-container form .multi-option .check-box {
   width: 1.15rem;
   height: 1.15rem;
-  border: 2px solid var(--border);
+  border: 2px solid rgba(25, 255, 197, 0.3);
   border-radius: 4px;
-  background-color: var(--bg);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   flex-shrink: 0;
 }
+[data-theme="light"] .form-container form .multi-option .check-box {
+  border-color: rgba(7, 116, 56, 0.3);
+}
 .form-container form .multi-option.selected .check-box {
-  background: var(--accent-light);
-  border-color: var(--accent);
+  background: var(--verdant-alt);
+  border-color: var(--verdant-alt);
+}
+[data-theme="light"] .form-container form .multi-option.selected .check-box {
+  background: var(--verdant-green);
+  border-color: var(--verdant-green);
 }
 .form-container form .multi-option .check-box svg {
   width: 0.75rem;
   height: 0.75rem;
-  stroke: var(--accent-dark);
+  stroke: #071a10;
   stroke-width: 3;
   fill: none;
 }
 .form-container form .multi-option .option-label {
   flex: 1;
   font-weight: 400;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 @media (min-width: 768px) {
   .form-container form .multi-select {
@@ -171,18 +263,31 @@
 }
 .form-container form .custom-input {
   width: 100%;
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.6rem, 2vw, 1rem);
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  border: 2px solid var(--border);
-  border-radius: 4px;
+  padding: 0.55rem 0.3rem;
+  background-color: rgba(25, 255, 197, 0.04);
+  color: var(--text-primary);
+  border: none;
+  border-bottom: 2px solid rgba(25, 255, 197, 0.28);
+  border-radius: 0;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: clamp(0.9rem, 2vw, 1rem);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+[data-theme="light"] .form-container form .custom-input {
+  background-color: rgba(7, 116, 56, 0.05);
+  border-bottom-color: rgba(7, 116, 56, 0.3);
+  color: var(--text-primary);
 }
 .form-container form .custom-input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--verdant-alt);
+  background-color: rgba(25, 255, 197, 0.08);
+}
+[data-theme="light"] .form-container form .custom-input:focus {
+  border-bottom-color: var(--verdant-green);
+  background-color: rgba(7, 116, 56, 0.08);
 }
 .form-container form .custom-input::-moz-placeholder {
   color: var(--text-disabled);
@@ -191,4 +296,136 @@
 .form-container form .custom-input::placeholder {
   color: var(--text-disabled);
   font-style: italic;
+}
+
+/* ── Wizard multi-step layout ─────────────────────────────── */
+.form-container .wizard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.wizard-step {
+  display: none;
+  width: 100%;
+}
+
+.wizard-step.visible {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+@media (min-width: 768px) {
+  .wizard-step.visible {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+}
+
+@keyframes wizardSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wizardSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wizard-step.visible.wizard-enter-right {
+  animation: wizardSlideRight 0.32s ease both;
+}
+
+.wizard-step.visible.wizard-enter-left {
+  animation: wizardSlideLeft 0.32s ease both;
+}
+
+.step-label {
+  grid-column: 1 / -1;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verdant-alt);
+  margin-bottom: 0.1rem;
+}
+
+[data-theme="light"] .step-label {
+  color: var(--verdant-green);
+}
+
+/* Nav row */
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.wizard-back {
+  min-width: 100px;
+}
+
+/* Dot indicators */
+.wizard-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.wizard-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--verdant-alt);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+[data-theme="light"] .wizard-dot {
+  border-color: var(--verdant-green);
+}
+
+.wizard-dot:hover {
+  transform: scale(1.25);
+}
+
+.wizard-dot.completed {
+  background: rgba(25, 255, 197, 0.32);
+}
+
+[data-theme="light"] .wizard-dot.completed {
+  background: rgba(7, 116, 56, 0.28);
+}
+
+.wizard-dot.active {
+  background: var(--verdant-alt);
+  transform: scale(1.25);
+}
+
+[data-theme="light"] .wizard-dot.active {
+  background: var(--verdant-green);
 }

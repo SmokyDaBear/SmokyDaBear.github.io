@@ -26,28 +26,26 @@ function ServiceCard({
 export function Services() {
   return (
     <section className="services-page center-flex flex-col">
-      <h2>Services Offered</h2>
-      <p>
-        I specialize in a range of web development services tailored to meet
-        your needs. Whether you're looking for a stunning portfolio site, a
-        robust e-commerce platform, or a dynamic web application, I've got you
-        covered.
+      <h2 className="section-title">Services Offered</h2>
+      <p className="section-subtitle">
+        End-to-end web development tailored to your business — from a polished
+        landing page to a full-scale web application.
       </p>
-      <ul className="unstyled-list skills-list">
-        <li>Custom Website Design and Development</li>
-        <li>Responsive and Mobile-First Design</li>
+      <ul className="skill-list skills-list">
+        <li>Custom Website Design &amp; Development</li>
+        <li>Responsive &amp; Mobile-First Design</li>
         <li>Content Management Systems (CMS)</li>
         <li>E-commerce Solutions</li>
-        <li>Website Maintenance and Support</li>
+        <li>Website Maintenance &amp; Support</li>
         <li>SEO Optimization</li>
       </ul>
       {services.map((service) => {
         return <ServiceCard key={service.name} service={service} />;
       })}
       <br />
-      <p className={"m-auto center-text italic"}>
-        Ready to take your online presence to the next level? Hire me today to
-        discuss your project and how I can help bring your vision to life!
+      <p className="m-auto center-text italic">
+        Ready to take your business to the next level?{" "}
+        <a href="#get-started" className="accent-underline">Start a project today.</a>
       </p>
       <br />
     </section>

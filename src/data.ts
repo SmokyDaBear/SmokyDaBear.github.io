@@ -4,6 +4,8 @@ import responsive from "./assets/icons/responsive.svg";
 import webDev from "./assets/icons/laptop-icon.svg";
 import seo from "./assets/icons/structure.svg";
 
+import quoteCalculator from "/page-previews/quote-calculator.jpg";
+import howHigh from "/page-previews/how-high.jpg";
 import saas from "/page-previews/saas.jpg";
 import autoSite from "/page-previews/auto-site.jpg";
 import cocktails from "/page-previews/cocktails.jpg";
@@ -23,6 +25,8 @@ export const SitePreviews = {
   notesApp,
   bakery,
   realEstate,
+  howHigh,
+  quoteCalculator,
 };
 
 export const services: Tservice[] = [
@@ -70,7 +74,27 @@ export const services: Tservice[] = [
 
 export const projects: project[] = [
   {
-    id: 5,
+    id: 0,
+    image: SitePreviews.howHigh,
+    title: "How High",
+    description:
+      "A dispensary site featuring product listings, specials, about page, and contact form.",
+    tags: ["NextJs", "Supabase", "E-commerce", "Design"],
+    pageUrl: "https://howhighmmj.com/",
+    featured: true,
+  },
+  {
+    id: 1,
+    image: SitePreviews.quoteCalculator,
+    title: "Quote Calculator",
+    description:
+      "PWA featuring indexedDB for offline storage and API integration with NHTSA for decoding VIN's and checking recalls. Allows users to save and manage vehicle information and generate maintenance quotes based on stored data.",
+    tags: ["JavaScript", "IndexedDB", "API Integration"],
+    pageUrl: "https://smokydabear.github.io/quote-calculator/",
+    featured: true,
+  },
+  {
+    id: 2,
     image: SitePreviews.notesApp,
     title: "Notes App",
     description:
@@ -82,18 +106,17 @@ export const projects: project[] = [
     featured: true,
   },
   {
-    id: 6,
+    id: 3,
     title: "Remmy's Bakery",
     description: "Bakery Site",
     tags: ["Food", "E-commerce"],
     sourceUrl: "https://github.com/SmokyDaBear/remmys-bakery-site",
     pageUrl: "https://smokydabear.github.io/remmys-bakery-site",
     image: SitePreviews.bakery,
-    featured: true,
   },
 
   {
-    id: 1,
+    id: 4,
     image: SitePreviews.cocktails,
     title: "Cocktails as a Service",
     description: "Find cocktail recipes by name or ingredient",
@@ -102,17 +125,16 @@ export const projects: project[] = [
     pageUrl: "https://smokydabear.github.io/cocktails-as-a-service/",
   },
   {
-    id: 2,
+    id: 5,
     image: SitePreviews.autoSite,
     title: "Green Lyon Automotive",
     description: "Automotive repair shop site",
     tags: ["Industrial", "Design", "Automotive"],
     pageUrl: "https://smokydabear.github.io/auto-site/",
     sourceUrl: "https://github.com/SmokyDaBear/auto-site",
-    featured: true,
   },
   {
-    id: 3,
+    id: 9,
     image: SitePreviews.folio,
     title: "folio.",
     description: "Portfolio Website",
@@ -121,7 +143,7 @@ export const projects: project[] = [
     pageUrl: "https://smokydabear.github.io/folio-project/",
   },
   {
-    id: 4,
+    id: 10,
     image: SitePreviews.encrypter,
     title: "Message Encryption Site",
     description:
@@ -132,7 +154,7 @@ export const projects: project[] = [
   },
 
   {
-    id: 7,
+    id: 11,
     title: "Real Estate",
     description: "Real Estate Listing Site",
     tags: ["Real Estate", "Listings", "Mockup"],
@@ -141,7 +163,7 @@ export const projects: project[] = [
     image: SitePreviews.realEstate,
   },
   {
-    id: 0,
+    id: 12,
     image: SitePreviews.saas,
     title: "Front",
     description: "Software as a service mockup site",

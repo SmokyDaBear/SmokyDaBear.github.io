@@ -1,10 +1,14 @@
 .project-card {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-md);
+  background-color: transparent;
+  border: 2px solid var(--verdant-alt);
+  border-radius: var(--radius-md);
+  box-shadow:
+    0 0 10px rgba(25, 255, 197, 0.12),
+    0 0 24px rgba(25, 255, 197, 0.04);
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   position: relative;
   width: 100%;
   &.hidden {
@@ -12,7 +16,21 @@
   }
   &:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    box-shadow:
+      0 0 18px rgba(25, 255, 197, 0.35),
+      0 0 40px rgba(25, 255, 197, 0.1);
+  }
+}
+[data-theme="light"] .project-card {
+  border-color: var(--verdant-green);
+  background-color: rgba(7, 116, 56, 0.04);
+  box-shadow:
+    0 0 8px rgba(7, 116, 56, 0.2),
+    0 0 20px rgba(7, 116, 56, 0.05);
+  &:hover {
+    box-shadow:
+      0 0 14px rgba(7, 116, 56, 0.32),
+      0 0 32px rgba(7, 116, 56, 0.08);
   }
 }
 
@@ -32,13 +50,19 @@
         animation: slideSlightUp 0.8s ease-out forwards;
       }
     }
+    & .ripple-btn:first-child {
+      color: var(--btn-primary-text);
+      border-color: var(--btn-primary-text);
+    }
+    & .ripple-btn:hover {
+      color: var(--btn-primary-text);
+    }
   }
   &.list {
     display: flex;
     flex-direction: column;
     align-items: center;
     & .project-card {
-      border-left: 4px solid var(--accent);
       &.animate {
         animation: slideSlightLeft 0.8s ease-out forwards;
       }
@@ -69,11 +93,17 @@
   gap: 8px;
 }
 .project-tag {
-  background-color: var(--accent);
-  color: var(--opacity-text);
+  background-color: rgba(25, 255, 197, 0.12);
+  color: var(--verdant-alt);
+  border: 1px solid rgba(25, 255, 197, 0.3);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
+}
+[data-theme="light"] .project-tag {
+  background-color: rgba(7, 116, 56, 0.1);
+  color: var(--verdant-green);
+  border-color: rgba(7, 116, 56, 0.3);
 }
 .project-links {
   display: flex;

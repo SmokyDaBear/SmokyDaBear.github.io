@@ -24,13 +24,13 @@ export function ProjectCard({
         <div className="project-header">
           <h3 className="project-title">{project.title}</h3>
           <div className="project-tags">
-            {project.tags.map((tag) => (
+            {project.tags.slice(0, 2).map((tag) => (
               <span key={tag} className="project-tag">
                 {tag}
               </span>
             ))}
           </div>
-          <p className="project-description">{project.description}</p>
+          <p className="project-description">{project.description.length > 100 ? `${project.description.slice(0, 100)}...` : project.description}</p>
         </div>
         <div className="project-links">
           {project.pageUrl && (

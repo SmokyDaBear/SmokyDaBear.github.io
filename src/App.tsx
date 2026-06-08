@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { hamburger } from "./icons/icons";
 import { Home } from "./pages/Home";
 import { Footer } from "./Components/Footer";
@@ -107,7 +107,12 @@ function App() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main
+        className="jagged-bg"
+        style={
+          { "--jagged-angle": `${45 + currentScrollY * 0.02}deg` } as React.CSSProperties
+        }
+      >
         {currentPage === "home" && <><Home /></>}
         {currentPage === "about" && <About />}
         {currentPage === "services" && <Services />}
@@ -116,22 +121,6 @@ function App() {
         {currentPage === "search" && <SearchResults />}
         {currentPage === "hidden-icons-page" && <HiddenIconPage />}
       </main>
-      <div
-        className="scroll-position-indicator"
-        style={{
-          width: `${(currentScrollY /
-            (document.body.scrollHeight - window.innerHeight)) *
-            100
-            }%`,
-          backgroundColor: "var(--verdant-green)",
-          position: "fixed",
-          bottom: 0,
-          left: 0,
-          height: "4px",
-          zIndex: 9999,
-          transition: "width 0.35s ease",
-        }}
-      ></div>
       <Footer scrollY={currentScrollY} />
     </>
   );
