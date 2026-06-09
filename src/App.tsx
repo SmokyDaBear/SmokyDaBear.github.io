@@ -10,7 +10,6 @@ import Faq from "./pages/Faq";
 import { SearchResults } from "./pages/SearchResults";
 import { ScrollHandler } from "./utils/scrollHandler";
 import { useTheme } from "./utils/themeHandler";
-import { HiddenIconPage } from "./icons/HiddenIconPage";
 import "./styles/animations.css";
 
 function App() {
@@ -119,7 +118,6 @@ function App() {
         {currentPage === "get-started" && <IntakeQuestionsForm />}
         {currentPage === "faq" && <Faq />}
         {currentPage === "search" && <SearchResults />}
-        {currentPage === "hidden-icons-page" && <HiddenIconPage />}
       </main>
       <Footer scrollY={currentScrollY} />
     </>
