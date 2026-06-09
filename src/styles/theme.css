@@ -9,21 +9,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg: #0c0c0c;
-  --bg-secondary: #141414;
-  --bg-tertiary: #1c1c1c;
-  --bg-card: #0b0c0b;
-  --bg-card-hover: #232723;
+  --bg: #06070e;
+  --bg-secondary: #13181d;
+  --bg-tertiary: #1c282b;
+  --bg-card: #131616;
+  --bg-card-hover: #2e3332;
   --bg-light: #cfcfcf;
   --bg-verdant: #0b3d26;
-  --text-primary: rgb(232, 226, 217);
-  --text-secondary: rgb(148, 148, 148);
+  --text-primary: rgb(211, 202, 188);
+  --text-secondary: rgb(168, 164, 152);
   --text-light: rgb(34, 34, 34);
   --text-disabled: rgb(99, 99, 99);
-  --accent: #592a94;
-  --accent-hover: #9a67ea;
-  --accent-light: #e3cfff;
-  --accent-dark: #8856c2;
+  --accent: #00aaff;
+  --accent-hover: #33c4ff;
+  --accent-light: #bde6ff;
+  --accent-dark: #0075c8;
+  --btn-shift-bg: #005ca0;
+  --btn-shift-hover: #0090e4;
   --border: #252525;
   --border-alt: #363636;
   --opacity-text: rgb(247, 250, 249);
@@ -61,9 +63,9 @@
   --shadow-green-glow: 2px 2px 0 var(--verdant-green);
 }
 [data-theme="light"] {
-  --bg: #f0f5f1;
-  --bg-secondary: #e4ede6;
-  --bg-tertiary: #d8e4da;
+  --bg: #dff0e3;
+  --bg-secondary: #d4ece6;
+  --bg-tertiary: #74be81;
   --bg-card: #eaf4eb;
   --bg-card-hover: #e1ece3;
   --bg-light: #f0f5f1;
@@ -83,6 +85,13 @@
   --icon-stroke-hover: rgb(0, 102, 153);
   --icon-fill: rgba(180, 210, 185, 0.7);
   --icon-fill-hover: rgba(0, 153, 204, 0.2);
+
+  --accent: #0070cc;
+  --accent-hover: #0090e8;
+  --accent-light: #d0e8ff;
+  --accent-dark: #00509a;
+  --btn-shift-bg: #00509a;
+  --btn-shift-hover: #0070cc;
 
   --opacity-10: rgba(14, 26, 18, 0.08);
   --opacity-20: rgba(14, 26, 18, 0.15);
