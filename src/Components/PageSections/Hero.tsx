@@ -1,26 +1,14 @@
-import { Suspense } from "react";
 import { sectionSeparator } from "../../icons/icons";
 
 export function Hero() {
 
   return <section id="hero">
-    <Suspense
-      fallback={
-        <img src="/forest-hero.png" alt="Hero" className="hero-image" />
-      }
-    >
-      <video
-        className="hero-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/forest-hero.png"
-      >
-        <source src="/forest.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </Suspense>
+    {/* <img
+      className="hero-image"
+      src="/slides/trees-hero.webp"
+      alt="Forest background"
+      fetchPriority="high"
+    /> */}
     <div className="hero-content">
       <h1 className="hero-title">Grow Your<br /><span className="hero-accent">Business</span></h1>
       <p className="hero-subtitle">
