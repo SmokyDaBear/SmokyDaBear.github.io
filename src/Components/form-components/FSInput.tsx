@@ -41,16 +41,22 @@ export function FSInputSingle({
   placeholder,
   state,
 }: inputProps & { state: FormState }) {
+  const [isFilled, setIsFilled] = useState(false);
+  const showAsterisk = required && !isFilled;
+  const trackFill = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setIsFilled(e.target.value.trim().length > 0);
+
   if (type === "textarea") {
     return (
       <div className={`input-wrap ${fullWidth ? " full-width" : ""}`}>
-        <label htmlFor={id}>{label}:</label>
+        <label htmlFor={id}>{label}{showAsterisk && <span className="required-marker" aria-hidden="true"> *</span>}</label>
         <textarea
           id={id}
           name={id}
           placeholder={placeholder || label}
           required={required || false}
           maxLength={5000}
+          onChange={trackFill}
         />
         <ValidationError prefix={label} field={id} errors={state.errors} />
       </div>
@@ -59,7 +65,7 @@ export function FSInputSingle({
   return (
     <>
       <div className={`input-wrap ${fullWidth ? "full-width" : ""}`}>
-        <label htmlFor={id}>{label}:</label>
+        <label htmlFor={id}>{label}{showAsterisk && <span className="required-marker" aria-hidden="true"> *</span>}</label>
         <input
           id={id}
           type={type || "text"}
@@ -67,6 +73,7 @@ export function FSInputSingle({
           placeholder={placeholder || label}
           required={required || false}
           maxLength={type === "email" ? 254 : type === "tel" ? 15 : 100}
+          onChange={trackFill}
         />
         <ValidationError prefix={label} field={id} errors={state.errors} />
       </div>
@@ -164,6 +171,7 @@ export function FSSingleSelect({
   state,
   allowCustom = false,
   customPlaceholder = "Please specify...",
+  onSelect,
 }: {
   id: string;
   label: string;
@@ -173,13 +181,14 @@ export function FSSingleSelect({
   state: FormState;
   allowCustom?: boolean;
   customPlaceholder?: string;
+  onSelect?: (value: string) => void;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [customValue, setCustomValue] = useState("");
 
   return (
     <div className={`input-wrap ${fullWidth ? " full-width" : ""}`}>
-      <label>{label}:</label>
+      <label>{label}</label>
       <div className="multi-select" role="listbox" aria-label={label}>
         {options.map((option) => {
           const isSelected = selected === option.value;
@@ -188,7 +197,7 @@ export function FSSingleSelect({
               type="button"
               key={option.value}
               className={`multi-option ${isSelected ? "selected" : ""}`}
-              onClick={() => setSelected(option.value)}
+              onClick={() => { setSelected(option.value); onSelect?.(option.value); }}
               role="option"
               aria-selected={isSelected}
             >
@@ -215,10 +224,9 @@ export function FSSingleSelect({
         {allowCustom && (
           <button
             type="button"
-            className={`multi-option ${
-              selected === "custom" ? "selected" : ""
-            }`}
-            onClick={() => setSelected("custom")}
+            className={`multi-option ${selected === "custom" ? "selected" : ""
+              }`}
+            onClick={() => { setSelected("custom"); onSelect?.("custom"); }}
           >
             <span className="check-box" aria-hidden="true">
               {selected === "custom" && (
@@ -297,7 +305,7 @@ function FSMultiSelect({
 
   return (
     <div className={`input-wrap ${fullWidth ? " full-width" : ""}`}>
-      <label>{label}:</label>
+      <label>{label}</label>
       <div
         className="multi-select"
         role="listbox"
@@ -338,9 +346,8 @@ function FSMultiSelect({
         {allowCustom && (
           <button
             type="button"
-            className={`multi-option ${
-              selected.includes("custom") ? "selected" : ""
-            }`}
+            className={`multi-option ${selected.includes("custom") ? "selected" : ""
+              }`}
             onClick={() => toggle("custom")}
           >
             <span className="check-box" aria-hidden="true">

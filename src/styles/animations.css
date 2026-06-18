@@ -104,6 +104,9 @@
   z-index: -2;
   transition: background-color 0.5s;
 }
+.bg-shift:disabled::after {
+  background-color: var(--bg);
+}
 .bg-shift::before {
   z-index: -1;
   position: absolute;
@@ -115,17 +118,21 @@
   width: 0%;
   background-color: var(--btn-shift-hover);
 }
-.bg-shift:hover {
+.bg-shift:hover:not(:disabled) {
   color: var(--btn-primary-text-hover);
   border-color: var(--btn-primary-text-hover);
   transform: scale(1.02);
   box-shadow: var(--shadow-md);
 }
-.bg-shift:hover::after {
+.bg-shift:not(:disabled):hover::after {
   background-color: transparent;
 }
-.bg-shift:hover::before {
+.bg-shift:not(:disabled):hover::before {
   width: 100%;
+}
+.bg-shift:disabled:hover {
+  box-shadow: 0 0 8px var(--danger);
+  cursor: none;
 }
 .ripple-btn {
   color: var(--btn-primary-text);
