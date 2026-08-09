@@ -126,6 +126,13 @@
   background: var(--bg-raised);
   overflow: hidden;
   padding-block: 0.9rem;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -139,7 +146,9 @@
   display: flex;
   gap: 2.75rem;
   width: max-content;
-  animation: marquee 36s linear infinite;
+  justify-content: space-evenly;
+  min-width: 200%;
+  animation: marquee 32s linear infinite;
 }
 
 .tech-strip:hover .tech-track {

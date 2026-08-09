@@ -5,6 +5,13 @@
   align-items: center;
 }
 .dots-bg {
+  position: relative;
+  z-index: 1;
+}
+.dots-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image:
     radial-gradient(
       ellipse 100% 55% at 50% 0%,
@@ -15,12 +22,21 @@
   background-size:
     100% 100%,
     28px 28px;
+  -webkit-mask-image: linear-gradient(to bottom right, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+  height: 110%;
 }
-[data-theme="light"] .dots-bg {
+[data-theme="light"] .dots-bg::before {
   background-image:
-    radial-gradient(ellipse 100% 55% at 50% 0%, rgba(7, 116, 56, 0.14) 0%, transparent 100%),
+    radial-gradient(
+      ellipse 100% 55% at 50% 0%,
+      rgba(7, 116, 56, 0.14) 0%,
+      transparent 100%
+    ),
     radial-gradient(circle, rgba(7, 116, 56, 0.26) 1px, transparent 2px);
-  background-size: 100% 100%, 28px 28px;
+  background-size:
+    100% 100%,
+    28px 28px;
 }
 
 @media (max-width: 760px) {
