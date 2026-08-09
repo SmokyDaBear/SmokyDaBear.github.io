@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { projects } from "../../data";
+import { projects } from "../../../old/data";
 import {
   chevronDown,
   chevronUp,

@@ -1,4 +1,4 @@
-import { services } from "../../data";
+import { services } from "../../../old/data";
 import { ServiceCard, ServiceCardHireLink } from "../ServiceCard";
 export function Offerings() {
   return <section id="services">

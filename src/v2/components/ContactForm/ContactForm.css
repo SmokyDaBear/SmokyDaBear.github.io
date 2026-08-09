@@ -1,0 +1,33 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.contact-blurb {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.contact-submit {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+}
+
+.contact-success {
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 0;
+}
