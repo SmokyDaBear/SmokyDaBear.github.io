@@ -3,12 +3,13 @@ import { useState } from "react";
 import { allCategories, projects } from "../../data/projects";
 import { ProjectTileGrid } from "../../components/ProjectTile/ProjectTile";
 import { Chip, ChipRow } from "../../components/Chip/Chip";
+import type { category } from "../../types";
 
 export function Projects() {
   const [filter, setFilter] = useState<string | null>(null);
   const categories = allCategories();
   const visible = filter
-    ? projects.filter((p) => p.categories.includes(filter))
+    ? projects.filter((p) => p.categories.includes(filter as category))
     : projects;
 
   return (
